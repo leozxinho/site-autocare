@@ -223,12 +223,13 @@
   }
   .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red-light)}
   h1{
-    font-size:clamp(38px,6.2vw,80px);
-    line-height:1.02;
-    margin:20px 0 22px;
-    max-width:15ch;
+    font-size:clamp(46px,7.8vw,100px);
+    line-height:.98;
+    margin:22px 0 26px;
+    max-width:14ch;
     text-wrap:balance;
     color:var(--text);
+    letter-spacing:-.5px;
   }
   h1 .stroke{color:var(--accent-text)}
   .lead{max-width:46ch;color:var(--text);opacity:.82;font-size:clamp(16px,1.6vw,19px);line-height:1.7}
@@ -253,12 +254,8 @@
   /* ---------- SECTION SHELL ---------- */
   section{padding:clamp(64px,9vw,110px) 0}
 
-  /* ---------- PAINÉIS DE NAVEGAÇÃO ---------- */
-  .panel{display:none;animation:panelIn .4s ease}
-  .panel.is-active{display:block}
-  @keyframes panelIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  /* ---------- NAV ACTIVE STATE (scroll-based) ---------- */
   .nav-links a.active{color:var(--accent-text)}
-  @media (prefers-reduced-motion:reduce){ .panel{animation:none} }
 
   /* ---------- TRUST BAR ---------- */
   .trust-bar{background:var(--red);color:#fff}
@@ -281,40 +278,93 @@
   .section-head p{color:var(--muted);margin-top:14px;font-size:16px;line-height:1.7}
   .services{background:var(--section-a)}
 
-  /* ---------- CRAFT / IMAGE SECTION ---------- */
+  /* ---------- CRAFT / SPLIT LAYOUT ---------- */
   .craft{
     position:relative;
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    border-top:1px solid var(--line);
+    background:var(--section-b);
     isolation:isolate;
     overflow:hidden;
   }
   .craft::before{
-    content:"";position:absolute;inset:0;z-index:-1;
-    background:
-      radial-gradient(ellipse at 15% 30%, rgba(165,18,31,var(--tint-strong)) 0%, transparent 55%),
-      linear-gradient(180deg, var(--section-b) 0%, var(--section-b) 100%);
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(ellipse at 10% 50%, rgba(165,18,31,var(--tint-strong)) 0%, transparent 50%);
   }
-  .craft::after{
-    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-    background-image:repeating-linear-gradient(115deg, rgba(165,18,31,var(--tint-lines)) 0 1px, transparent 1px 90px);
+  .craft{padding-block:clamp(80px,10vw,120px)}
+  .craft-inner{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;
   }
-  .craft{padding-block:clamp(90px,12vw,140px)}
-  .craft-copy{max-width:none}
-  .craft-copy h2{font-size:clamp(26px,3.6vw,38px);max-width:16ch;line-height:1.12;color:var(--text)}
-  .craft-copy p{color:var(--muted);margin-top:18px;max-width:60ch;line-height:1.75}
+  .craft-copy h2{font-size:clamp(26px,3.4vw,40px);max-width:16ch;line-height:1.1;color:var(--text)}
+  .craft-copy p{color:var(--muted);margin-top:18px;line-height:1.75;font-size:15.5px}
   .craft-list{
-    list-style:none;margin:36px 0 0;padding:0;
-    display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
+    list-style:none;margin:32px 0 0;padding:0;
+    display:grid;gap:12px;
   }
   .craft-list li{
-    display:flex;gap:14px;align-items:flex-start;color:var(--text);font-size:15px;line-height:1.5;
-    background:var(--section-a);border:1px solid var(--line);border-radius:var(--radius-btn);
-    padding:18px 18px;
+    display:flex;gap:14px;align-items:flex-start;color:var(--text);font-size:14.5px;line-height:1.5;
+    padding:14px 16px;
+    border-left:2px solid var(--red);
+    background:rgba(165,18,31,.04);
+    border-radius:0 var(--radius-btn) var(--radius-btn) 0;
   }
   .craft-list li::before{
-    content:"";flex:0 0 auto;width:22px;height:22px;margin-top:1px;border-radius:6px;
-    background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/14px no-repeat;
+    content:"";flex:0 0 auto;width:20px;height:20px;margin-top:1px;border-radius:5px;
+    background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/13px no-repeat;
   }
+
+  /* Craft visual (image panel) */
+  .craft-visual{
+    position:relative;border-radius:14px;overflow:hidden;
+    aspect-ratio:3/4;
+    box-shadow:0 30px 70px rgba(0,0,0,.4), 0 0 0 1px var(--line);
+  }
+  .craft-visual img{
+    width:100%;height:100%;object-fit:cover;
+    object-position:65% center;
+    display:block;
+    filter:saturate(1.1) brightness(.88);
+  }
+  .craft-visual::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(160deg, rgba(10,11,12,.45) 0%, transparent 55%);
+    pointer-events:none;
+  }
+  :root[data-theme="light"] .craft-visual img{filter:saturate(1.1) brightness(.95)}
+  :root[data-theme="light"] .craft-visual::after{
+    background:linear-gradient(160deg, rgba(245,244,241,.3) 0%, transparent 55%);
+  }
+
+  @media (max-width:860px){
+    .craft-inner{grid-template-columns:1fr;gap:40px}
+    .craft-visual{
+      order:-1;aspect-ratio:16/9;
+      border-radius:12px;
+    }
+  }
+
+  /* ---------- WHY / DIFERENCIAIS — editorial numbers ---------- */
+  .why{background:var(--section-a)}
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,3vw,40px)}
+  .why-item{
+    border:1px solid var(--line);
+    border-radius:var(--radius-btn);
+    padding:clamp(24px,3vw,40px);
+    position:relative;overflow:hidden;
+    background:var(--section-b);
+    transition:border-color .25s ease, transform .25s ease;
+  }
+  .why-item:hover{border-color:rgba(165,18,31,.3);transform:translateY(-4px)}
+  .why-item-num{
+    display:block;
+    font-family:'Oswald',Arial,sans-serif;
+    font-size:clamp(56px,7vw,80px);font-weight:700;
+    color:var(--red);opacity:.1;
+    line-height:1;margin-bottom:16px;
+    letter-spacing:-1px;
+  }
+  .why-item h3{font-size:18px;margin-bottom:10px;color:var(--text)}
+  .why-item p{color:var(--muted);font-size:14.5px;line-height:1.65;margin:0}
 
   /* ---------- SERVICES ---------- */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -388,12 +438,7 @@
     .card-cta-label,.card-cta-label .arrow{animation:none}
   }
 
-  /* ---------- WHY / DIFFERENTIALS ---------- */
-  .why{background:var(--section-a)}
-  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-  .why-item{border-top:2px solid var(--gold);padding-top:18px}
-  .why-item h3{font-size:17px;margin-bottom:8px}
-  .why-item p{color:var(--muted);font-size:14.5px;line-height:1.65;margin:0}
+  /* why-item styles now defined in CRAFT/WHY block above */
 
   /* ---------- CONTACT ---------- */
   .reviews{background:var(--section-b)}
@@ -420,16 +465,36 @@
   .contact{
     background:var(--section-b);
     text-align:left;
+    position:relative;
+    border-top:1px solid var(--line);
+    overflow:hidden;
   }
-  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:start}
-  .contact h2{font-size:clamp(28px,4vw,42px);max-width:12ch;color:var(--text)}
-  .contact p.lead-c{color:var(--muted);margin-top:16px;max-width:44ch;line-height:1.7}
+  .contact::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse at 80% 50%, rgba(165,18,31,var(--tint-strong)) 0%, transparent 55%);
+  }
+  .contact-grid{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,5vw,60px);align-items:start
+  }
+  .contact h2{
+    font-size:clamp(32px,4.5vw,52px);
+    max-width:12ch;color:var(--text);
+    line-height:1.05;
+  }
+  .contact p.lead-c{color:var(--muted);margin-top:18px;max-width:44ch;line-height:1.7;font-size:15.5px}
   .contact-actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
-  .info-card{border:1px solid var(--line);background:var(--section-a);padding:28px}
-  .info-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
-  .info-row:last-child{border-bottom:none}
-  .info-row b{display:block;font-size:14px;color:var(--accent-text);margin-bottom:3px}
-  .info-row span{color:var(--muted);font-size:14.5px}
+  .info-card{
+    border:1px solid var(--line);
+    background:var(--section-a);
+    padding:clamp(22px,3vw,32px);
+    border-radius:var(--radius-btn);
+  }
+  .info-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .info-row:last-child{border-bottom:none;padding-bottom:0}
+  .info-row:first-child{padding-top:0}
+  .info-row b{display:block;font-size:13px;color:var(--accent-text);margin-bottom:4px;letter-spacing:.4px;text-transform:uppercase}
+  .info-row span{color:var(--muted);font-size:14.5px;line-height:1.55}
 
   footer{
     padding:64px 6% 0;color:var(--muted);border-top:1px solid var(--line);font-size:14px;
@@ -469,7 +534,6 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:960px){
-    .why-grid{grid-template-columns:repeat(2,1fr)}
     .contact-grid{grid-template-columns:1fr}
     .cards{grid-template-columns:repeat(2,1fr)}
     .reviews-grid{grid-template-columns:repeat(2,1fr)}
@@ -480,13 +544,12 @@
     .trust-inner{grid-template-columns:1fr 1fr;gap:16px 12px}
     .trust-item{justify-content:flex-start;font-size:13px}
     .hero-bg{
-      background-size:contain;
-      background-repeat:no-repeat;
-      background-position:center 160px;
+      background-size:cover;
+      background-position:70% center;
     }
     .hero::before{
       background:
-        linear-gradient(to bottom, rgba(var(--hero-overlay),.82) 0%, rgba(var(--hero-overlay),.7) 40%, rgba(var(--hero-overlay),.88) 72%, rgba(var(--hero-overlay),1) 100%);
+        linear-gradient(to bottom, rgba(var(--hero-overlay),.88) 0%, rgba(var(--hero-overlay),.75) 45%, rgba(var(--hero-overlay),.92) 75%, rgba(var(--hero-overlay),1) 100%);
     }
   }
   @media (max-width:520px){
@@ -494,14 +557,13 @@
     section{padding:52px 0}
     .why-grid{grid-template-columns:1fr}
     .hero-ctas{flex-direction:column;align-items:stretch}
-    .craft-list{grid-template-columns:1fr}
     .reviews-grid{grid-template-columns:1fr}
     .btn{justify-content:center;padding:16px 24px;font-size:16px}
     .logo{font-size:17px}
     /* respiro e leitura no mobile */
     .section-head{margin-bottom:32px}
     .hero-inner{padding-block:40px}
-    h1{margin:14px 0 18px}
+    h1{margin:14px 0 18px;font-size:clamp(38px,10.5vw,54px);letter-spacing:-.2px}
     .lead{font-size:16px}
     .hero-stats{gap:24px;margin-top:40px}
     /* cards: mais compactos e botão maior para o dedo */
@@ -526,6 +588,91 @@
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *{transition:none !important}
+  }
+
+  /* ===== HERO CINEMATIC UPGRADE ===== */
+  /* Extra scale for cursor parallax headroom (desktop only) */
+  @media (hover:hover) and (pointer:fine){
+    .hero-bg{ transform:scale(1.09); transform-origin:center; will-change:transform; }
+  }
+
+  /* GSAP initial states — hidden until JS animates them in */
+  .hero-tag{
+    display:inline-flex;
+    opacity:0; transform:translateY(10px);
+    margin-bottom:26px;
+  }
+  .hero-line-wrap{
+    display:block; overflow:hidden;
+    padding-bottom:.04em; /* prevent descender clip */
+  }
+  .hero-line{
+    display:block; transform:translateY(104%);
+    will-change:transform;
+  }
+  .hero-lead{ opacity:0; transform:translateY(16px); }
+  .hero-ctas{
+    display:flex; flex-wrap:wrap; gap:14px; margin-top:36px;
+    opacity:0; transform:translateY(16px);
+  }
+  .hero-stats{ opacity:0; transform:translateY(16px); }
+
+  /* Fallback for no-JS / prefers-reduced-motion */
+  @media (prefers-reduced-motion:reduce){
+    .hero-bg{ transform:none !important; }
+    .hero-tag,.hero-line,.hero-lead,.hero-ctas,.hero-stats{
+      opacity:1 !important; transform:none !important;
+    }
+  }
+
+  /* Hero CTA — WhatsApp */
+  .btn-whats-hero{
+    background:var(--whats); color:#fff;
+    font-size:15.5px; padding:16px 28px;
+    box-shadow:0 4px 22px rgba(47,174,99,.3);
+    transition:transform .2s ease, box-shadow .2s ease, background .15s ease;
+  }
+  .btn-whats-hero svg{ fill:currentColor; flex:0 0 auto; }
+  .btn-whats-hero:hover{
+    background:#33c46f;
+    transform:translateY(-2px);
+    box-shadow:0 8px 30px rgba(47,174,99,.42);
+  }
+
+  /* Contact CTA spacing */
+  .contact-actions{ margin-top:28px; display:flex; flex-wrap:wrap; gap:12px; }
+
+  /* Hero CTA — ghost outline */
+  .btn-hero-ghost{
+    border:1px solid rgba(255,255,255,.22);
+    background:rgba(255,255,255,.04);
+    color:var(--text);
+    font-size:15.5px; padding:16px 24px;
+    backdrop-filter:blur(4px);
+  }
+  :root[data-theme="light"] .btn-hero-ghost{
+    border-color:var(--line);
+    background:rgba(0,0,0,.025);
+  }
+  .btn-hero-ghost:hover{ border-color:var(--gold); color:var(--accent-text); }
+
+  /* ===== CARD HOVER UPGRADE ===== */
+  .card:hover{
+    transform:translateY(-8px) scale(1.006);
+    box-shadow:
+      0 22px 52px rgba(0,0,0,.2),
+      0 0 0 1px rgba(165,18,31,.12),
+      inset 0 0 44px rgba(165,18,31,.04);
+    border-color:rgba(165,18,31,.14);
+  }
+
+  /* ===== EYEBROW LABEL (editorial) ===== */
+  .eyebrow{
+    display:block;
+    font-family:'Inter',sans-serif;
+    font-size:11px; font-weight:700;
+    letter-spacing:2.6px; text-transform:uppercase;
+    color:var(--accent-text); margin-bottom:14px;
   }
 
   /* ===== INTRO: MONTAGEM DO CARRO ===== */
@@ -718,8 +865,20 @@
 <section class="hero">
   <div class="hero-bg" role="presentation"></div>
   <div class="wrap hero-inner">
-    <h1>Cada detalhe do seu carro <span class="stroke">merece cuidado.</span></h1>
-    <p class="lead">Lavagem, higienização, polimento técnico e proteção de pintura com o mesmo padrão de atenção que uma montadora dá a cada peça do veículo.</p>
+    <div class="tag hero-tag">Estética Automotiva <span aria-hidden="true" style="margin-inline:.18em">·</span> Garça/SP</div>
+    <h1>
+      <span class="hero-line-wrap"><span class="hero-line">Cada detalhe</span></span>
+      <span class="hero-line-wrap"><span class="hero-line">do seu carro</span></span>
+      <span class="hero-line-wrap"><span class="hero-line stroke">merece cuidado.</span></span>
+    </h1>
+    <p class="lead hero-lead">Lavagem, higienização, polimento técnico e proteção de pintura com o mesmo padrão de atenção que uma montadora dá a cada peça do veículo.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-whats-hero" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Auto%20Care." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a class="btn btn-hero-ghost" href="#servicos">Ver serviços</a>
+    </div>
     <div class="hero-stats">
       <div class="stat"><b>11</b><span>serviços especializados</span></div>
       <div class="stat"><b>100%</b><span>atendimento com hora marcada</span></div>
@@ -748,12 +907,12 @@
   </div>
 </div>
 
-<div class="panel is-active" id="panel-servicos" data-panel="servicos">
-<section class="craft" aria-label="Nossa abordagem de trabalho">
-  <div class="wrap">
+<section class="craft" id="sobre" aria-label="Nossa abordagem de trabalho">
+  <div class="wrap craft-inner">
     <div class="craft-copy reveal">
+      <span class="eyebrow">Nossa abordagem</span>
       <h2>Pensamos no carro peça por peça.</h2>
-      <p>Um veículo é a soma de centenas de componentes: pintura, vidros, bancos, plásticos, rodas. Nosso processo de estética automotiva trata cada um deles de forma específica, com o produto e a técnica corretos para o material.</p>
+      <p>Um veículo é a soma de centenas de componentes: pintura, vidros, bancos, plásticos, rodas. Nosso processo trata cada um de forma específica, com o produto e a técnica corretos para o material.</p>
       <ul class="craft-list">
         <li>Diagnóstico da pintura antes de qualquer polimento</li>
         <li>Produtos específicos para couro, tecido e plástico interno</li>
@@ -761,12 +920,16 @@
         <li>Revisão final item a item antes da entrega</li>
       </ul>
     </div>
+    <div class="craft-visual reveal">
+      <img src="hero.webp" alt="Veículo em processo de estética automotiva na Auto Care" loading="lazy" width="800" height="1067">
+    </div>
   </div>
 </section>
 
 <section id="servicos" class="services">
   <div class="wrap">
     <div class="section-head reveal">
+      <span class="eyebrow">O que fazemos</span>
       <h2>Nossos serviços</h2>
       <p>Cada serviço é feito de forma individual e especializada. Escolha o que precisa e fale direto com a gente pelo WhatsApp.</p>
     </div>
@@ -935,28 +1098,30 @@
      Restauração de farol, troca de farol, para-choque, retrovisor,
      manutenção de fechadura, manutenção de vidro elétrico ou manual,
      maçaneta, iluminação, polimento, lavagem de banco, higienização interna. -->
-</div><!-- /panel-servicos -->
-
-<div class="panel" id="panel-diferenciais" data-panel="diferenciais">
 <section id="diferenciais" class="why">
   <div class="wrap">
     <div class="section-head reveal">
+      <span class="eyebrow">Diferenciais</span>
       <h2>Por que escolher a Auto Care</h2>
     </div>
     <div class="why-grid">
       <div class="why-item reveal">
+        <span class="why-item-num" aria-hidden="true">01</span>
         <h3>Atendimento com hora marcada</h3>
         <p>Sem fila e sem espera: seu carro é atendido no horário combinado.</p>
       </div>
       <div class="why-item reveal">
+        <span class="why-item-num" aria-hidden="true">02</span>
         <h3>Produtos de qualidade</h3>
         <p>Ceras, polidores e produtos de limpeza selecionados para cada tipo de superfície.</p>
       </div>
       <div class="why-item reveal">
+        <span class="why-item-num" aria-hidden="true">03</span>
         <h3>Equipe experiente</h3>
         <p>Profissionais treinados em técnicas de polimento e conservação automotiva.</p>
       </div>
       <div class="why-item reveal">
+        <span class="why-item-num" aria-hidden="true">04</span>
         <h3>Orçamento sem compromisso</h3>
         <p>Avaliação do veículo e valor combinado antes de iniciar qualquer serviço.</p>
       </div>
@@ -967,6 +1132,7 @@
 <section class="reviews" aria-label="Depoimentos de clientes">
   <div class="wrap">
     <div class="section-head reveal">
+      <span class="eyebrow">Clientes</span>
       <h2>O que dizem nossos clientes</h2>
       <p>A satisfação de quem confia o carro à Auto Care.</p>
     </div>
@@ -1005,14 +1171,18 @@
     <p class="reviews-note">Depoimentos ilustrativos.</p>
   </div>
 </section>
-</div><!-- /panel-diferenciais -->
-
-<div class="panel" id="panel-contato" data-panel="contato">
 <section id="contato" class="contact">
   <div class="wrap contact-grid">
     <div class="reveal">
+      <span class="eyebrow">Fale conosco</span>
       <h2>Seu carro merece esse cuidado.</h2>
       <p class="lead-c">Entre em contato e agende seu horário na Auto Care, em Garça/SP. Respondemos rápido pelo WhatsApp.</p>
+      <div class="contact-actions">
+        <a class="btn btn-whats-hero" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Auto%20Care." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
     </div>
     <div class="info-card reveal">
       <div class="info-row">
@@ -1027,10 +1197,15 @@
           <span>+55 14 99702-4535</span>
         </div>
       </div>
+      <div class="info-row">
+        <div>
+          <b>Horário</b>
+          <span>Seg–Sex 08h–18h &nbsp;·&nbsp; Sáb 08h–12h</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-</div><!-- /panel-contato -->
 
 <footer>
   <div class="wrap footer-grid">
@@ -1085,73 +1260,24 @@
 </div>
 
 <script>
-  /* ===== NAVEGAÇÃO POR PAINÉIS ===== */
+  /* ===== NAVEGAÇÃO SCROLL — destaca aba ativa por seção visível ===== */
   (function(){
-    const panels = document.querySelectorAll('.panel');
-    if (!panels.length) return;
     const navLinks = document.querySelectorAll('#navLinks a[href^="#"]');
+    const sectionIds = ['servicos','diferenciais','contato'];
 
-    function showPanel(name){
-      let found = false;
-      panels.forEach(p => {
-        const on = p.getAttribute('data-panel') === name;
-        p.classList.toggle('is-active', on);
-        if (on) found = true;
-      });
-      navLinks.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + name);
-      });
-      // reativa animações de reveal dentro do painel exibido
-      if (found) {
-        document.querySelectorAll('.panel.is-active .reveal').forEach(el => el.classList.add('is-visible'));
-      }
-      return found;
+    function setActive(id){
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
     }
 
-    // mapa href -> nome do painel (aceita #servicos, #diferenciais, #contato)
-    const map = { '#servicos':'servicos', '#diferenciais':'diferenciais', '#contato':'contato' };
+    // Highlight the nav link of whichever section is most prominent in viewport
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) setActive(en.target.id); });
+    }, { threshold: 0.25, rootMargin: '-10% 0px -55% 0px' });
 
-    // rola até o início do painel ativo (logo abaixo do cabeçalho fixo)
-    function scrollToPanel(){
-      const active = document.querySelector('.panel.is-active');
-      if (!active) { window.scrollTo({ top:0, behavior:'smooth' }); return; }
-      const header = document.getElementById('siteNav');
-      const offset = header ? header.offsetHeight : 0;
-      const y = active.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: Math.max(0, y), behavior:'smooth' });
-    }
+    sectionIds.forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
 
-    navLinks.forEach(a => { a.classList.toggle('active', map[a.getAttribute('href')] === 'servicos'); });
-
-    // Delegação de eventos: captura cliques em QUALQUER link de painel,
-    // mesmo os do rodapé, garantindo que a navegação sempre funcione.
-    document.addEventListener('click', (e) => {
-      const link = e.target.closest('a[href^="#"]');
-      if (!link) return;
-      const href = link.getAttribute('href');
-      if (map[href]) {
-        e.preventDefault();
-        showPanel(map[href]);
-        // garante que o scroll do body esteja liberado (menu mobile trava com overflow:hidden)
-        document.body.style.overflow = '';
-        // espera o menu fechar (transição ~0.3s) antes de rolar até o painel
-        setTimeout(scrollToPanel, 320);
-        if (history.replaceState) history.replaceState(null, '', href);
-      }
-    });
-
-    // Também reage a mudanças no hash da URL (fallback robusto)
-    window.addEventListener('hashchange', () => {
-      if (map[location.hash]) {
-        showPanel(map[location.hash]);
-        document.body.style.overflow = '';
-        setTimeout(scrollToPanel, 320);
-      }
-    });
-
-    // painel inicial conforme hash da URL
-    const initial = (location.hash && map[location.hash]) ? map[location.hash] : 'servicos';
-    showPanel(initial);
+    // Default active on load
+    setActive('servicos');
   })();
 
   /* ===== ANO NO RODAPÉ ===== */
@@ -1266,7 +1392,10 @@
       intro.classList.add('is-hidden');
       document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
-      setTimeout(() => { intro.remove(); }, 800);
+      setTimeout(() => {
+        intro.remove();
+        document.dispatchEvent(new CustomEvent('ac:intro-done'));
+      }, 800);
     }
 
     function disassemble(){
@@ -1319,5 +1448,57 @@
   })();
 </script>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+/* ===== GSAP CINEMATIC HERO ===== */
+(function(){
+  'use strict';
+  if (typeof gsap === 'undefined') return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  /* Build the hero entrance timeline */
+  function playHeroEntrance(delay) {
+    var tl = gsap.timeline({ delay: delay || 0 });
+    tl.to('.hero-tag',  { opacity:1, y:0, duration:.55, ease:'power2.out' })
+      .to('.hero-line', { y:'0%',    duration:.85, stagger:.13, ease:'power3.out' }, '-=.18')
+      .to('.hero-lead', { opacity:.82, y:0, duration:.60, ease:'power2.out' }, '-=.38')
+      .to('.hero-ctas', { opacity:1, y:0, duration:.55, ease:'power2.out' }, '-=.30')
+      .to('.hero-stats',{ opacity:1, y:0, duration:.50, ease:'power2.out' }, '-=.22');
+  }
+
+  /* Detect whether the car intro was already seen this session */
+  var introEl    = document.getElementById('carIntro');
+  var introSeen  = (function(){
+    try { return !!sessionStorage.getItem('ac_intro_seen'); } catch(e){ return false; }
+  })();
+
+  if (!introEl || introSeen) {
+    /* No intro overlay — play immediately after a short settle delay */
+    playHeroEntrance(0.35);
+  } else {
+    /* Wait for the intro to dispatch its done event (or fire if skipped) */
+    document.addEventListener('ac:intro-done', function(){ playHeroEntrance(0.2); }, { once: true });
+  }
+
+  /* ── Cursor parallax on hero background (desktop / fine pointer only) ── */
+  var heroBg = document.querySelector('.hero-bg');
+  if (heroBg && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var mx = 0, my = 0, cx = 0, cy = 0;
+    window.addEventListener('mousemove', function(e){
+      mx = ((e.clientX / window.innerWidth)  - .5) * 20;
+      my = ((e.clientY / window.innerHeight) - .5) * 11;
+    }, { passive: true });
+    (function loop(){
+      cx += (mx - cx) * .056;
+      cy += (my - cy) * .056;
+      heroBg.style.transform =
+        'translate(' + cx.toFixed(2) + 'px,' + cy.toFixed(2) + 'px) scale(1.09)';
+      requestAnimationFrame(loop);
+    })();
+  }
+
+})();
+</script>
 </body>
 </html>
