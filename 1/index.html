@@ -1,0 +1,1504 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0b0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f4f1" media="(prefers-color-scheme: light)">
+<title>Auto Care | Estética Automotiva Garça/SP</title>
+<meta name="description" content="Estética automotiva em Garça/SP: polimento, lavagem e higienização interna, restauração e troca de faróis, para-choque, retrovisor, maçaneta, fechaduras, vidro elétrico e iluminação.">
+<link rel="canonical" href="https://autocare-garca.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Auto Care | Estética Automotiva Garça/SP">
+<meta property="og:description" content="Estética automotiva em Garça/SP: lavagem, higienização, polimento técnico, proteção de pintura, restauração de faróis e serviços especializados.">
+<meta property="og:url" content="https://autocare-garca.com.br/">
+<meta property="og:image" content="https://autocare-garca.com.br/hero.webp">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Auto Care | Estética Automotiva Garça/SP">
+<meta name="twitter:description" content="Estética automotiva em Garça/SP: lavagem, higienização, polimento e proteção.">
+<meta name="twitter:image" content="https://autocare-garca.com.br/hero.webp">
+<link rel="preload" as="image" type="image/webp" href="hero.webp">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwYTBhMGEiLz4KICA8cmVjdCB4PSIxLjUiIHk9IjEuNSIgd2lkdGg9IjYxIiBoZWlnaHQ9IjYxIiByeD0iMTMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJhMmIyYyIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHRleHQgeD0iMzIiIHk9IjQzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIzMCIgbGV0dGVyLXNwYWNpbmc9Ii0xIj4KICAgIDx0c3BhbiBmaWxsPSIjZjVmM2VlIj5BPC90c3Bhbj48dHNwYW4gZmlsbD0iI2Q4MWYyZiI+QzwvdHNwYW4+CiAgPC90ZXh0Pgo8L3N2Zz4K">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  /* Aplica o tema antes de renderizar para evitar "flash" */
+  (function(){
+    try{
+      var saved = localStorage.getItem('ac_theme');
+      var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      var theme = saved || (prefersLight ? 'light' : 'dark');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme','light');
+    }catch(e){}
+  })();
+</script>
+<style>
+  :root{
+    /* Tema escuro (padrão) */
+    --bg:#0a0b0c;
+    --panel:#121314;
+    --panel-2:#0e0f10;
+    --line:#232527;
+    --text:#f2efe9;
+    --muted:#9a9d9f;
+    --nav-bg:8,9,9;              /* usado em rgba() na nav */
+    --hero-overlay:6,7,7;       /* usado no gradiente do hero */
+    --contact-bg:linear-gradient(160deg,#161209,#0a0b0c 55%);
+    --craft-grad-end:#0c0d0e;
+    --tint-strong:.10;         /* opacidade do brilho vermelho nas seções */
+    --tint-lines:.05;          /* opacidade das linhas decorativas */
+    --section-a:#0a0b0c;       /* fundo de seção (alternância A) */
+    --section-b:#101112;       /* fundo de seção (alternância B) */
+    --red:#a5121f;
+    --red-light:#d02635;
+    --gold:var(--red);
+    --gold-light:var(--red-light);
+    --accent-text:#e0384a;     /* vermelho p/ TEXTO — contraste alto no escuro */
+    --whats:#2fae63;
+    --radius:2px;
+    --radius-btn:10px;
+    --wrap:1180px;
+  }
+
+  :root[data-theme="light"]{
+    /* Tema claro */
+    --bg:#f5f4f1;
+    --panel:#ffffff;
+    --panel-2:#eceae5;
+    --line:#dcd9d2;
+    --text:#1a1b1c;
+    --muted:#5f6163;
+    --nav-bg:245,244,241;
+    --hero-overlay:245,244,241;
+    --contact-bg:#eceae5;
+    --craft-grad-end:#eceae5;
+    --tint-strong:0;           /* sem brilho vermelho no claro */
+    --tint-lines:.03;          /* linhas bem sutis no claro */
+    --section-a:#ffffff;       /* fundo de seção (alternância A) */
+    --section-b:#f1efea;       /* fundo de seção (alternância B) */
+    --red:#a5121f;
+    --red-light:#d02635;
+    --gold:var(--red);
+    --gold-light:var(--red-light);
+    --accent-text:#a5121f;     /* vermelho limpo p/ TEXTO no claro */
+    --whats:#2fae63;
+  }
+
+  :root{ color-scheme:dark; }
+  :root[data-theme="light"]{ color-scheme:light; }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{overflow-x:hidden}
+  a,button{-webkit-tap-highlight-color:rgba(165,18,31,.15)}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',Arial,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    transition:background-color .3s ease, color .3s ease;
+  }
+  h1,h2,h3{
+    font-family:'Oswald',Arial,sans-serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:.2px;
+  }
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{width:min(var(--wrap),92%);margin-inline:auto}
+  :focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:fixed;inset:0 0 auto 0;z-index:50;
+    padding:18px 0;
+    background:linear-gradient(to bottom, rgba(var(--nav-bg),.92), rgba(var(--nav-bg),0));
+  }
+  header.site-nav.scrolled{background:rgba(var(--nav-bg),.92);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .nav-actions{display:flex;align-items:center;gap:12px;order:3}
+  .logo{font-family:'Oswald',Arial,sans-serif;font-weight:700;font-size:20px;letter-spacing:.5px;white-space:nowrap}
+  .logo .accent{color:var(--accent-text)}
+  .logo small{display:block;font-family:'Inter',Arial,sans-serif;color:var(--muted);font-weight:500;font-size:11px;letter-spacing:1.5px;margin-top:2px}
+
+  .nav-links{display:flex;align-items:center;gap:34px;list-style:none;margin:0;padding:0}
+  .nav-links a{text-decoration:none;color:var(--text);font-size:14.5px;transition:color .15s ease}
+  .nav-links a:hover{color:var(--accent-text)}
+  .nav-links .nav-cta{
+    background:var(--gold);color:#fff;padding:10px 18px;border-radius:var(--radius-btn);
+    font-weight:600;font-size:14px;
+  }
+  .nav-links .nav-cta:hover{background:var(--gold-light)}
+
+  .menu-toggle{
+    display:none;flex-direction:column;justify-content:center;gap:5px;
+    width:38px;height:38px;background:none;border:1px solid var(--line);border-radius:var(--radius-btn);
+    cursor:pointer;padding:0
+  }
+  .menu-toggle span{display:block;height:2px;width:18px;background:var(--text);margin:0 auto}
+
+  /* ---------- THEME TOGGLE ---------- */
+  .theme-toggle{
+    display:flex;align-items:center;justify-content:center;
+    width:38px;height:38px;flex:0 0 auto;
+    background:var(--red);border:1px solid var(--red);border-radius:50%;
+    color:#fff;cursor:pointer;padding:0;
+    transition:background .15s ease, border-color .15s ease;
+  }
+  .theme-toggle:hover{background:var(--red-light);border-color:var(--red-light)}
+  .theme-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .theme-toggle .icon-moon{display:none}
+  .theme-toggle .icon-sun{display:block}
+  :root[data-theme="light"] .theme-toggle .icon-sun{display:none}
+  :root[data-theme="light"] .theme-toggle .icon-moon{display:block}
+
+  /* mobile nav — logo + tema na 1ª linha, abas distribuídas na 2ª */
+  @media (max-width:860px){
+    header.site-nav{padding:12px 0}
+    .nav-inner{flex-wrap:wrap;gap:12px;align-items:center}
+    .logo{flex:1 1 auto;order:1}
+    .nav-actions{order:2;flex:0 0 auto}
+    .nav-links{
+      order:3;flex:1 1 100%;
+      display:flex;flex-direction:row;align-items:stretch;
+      gap:8px;padding:0;margin:0;
+      transform:none;position:static;height:auto;width:100%;
+      background:none;border:none;box-shadow:none;
+    }
+    .nav-links li{flex:1 1 0;min-width:0}
+    .nav-links a{
+      font-size:13.5px;font-weight:600;text-align:center;
+      display:flex;align-items:center;justify-content:center;
+      padding:10px 8px;border-radius:999px;border:1px solid var(--line);
+      color:var(--text);width:100%;
+    }
+    .nav-links a.active{background:var(--red);border-color:var(--red);color:#fff !important}
+    .nav-links .nav-cta{display:none}
+    .menu-toggle{display:none}
+    .nav-overlay{display:none}
+    .hero{padding-top:150px}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100svh;
+    display:flex;align-items:center;
+    position:relative;
+    padding-top:80px;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .hero-bg{
+    position:absolute;inset:0;z-index:-2;
+    background-image:url('hero.webp');
+    background-size:cover;
+    background-position:70% 45%;
+    filter:saturate(1.05) brightness(.85);
+    opacity:.9;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:
+      linear-gradient(100deg, rgba(var(--hero-overlay),1) 15%, rgba(var(--hero-overlay),.92) 40%, rgba(var(--hero-overlay),.4) 72%, rgba(var(--hero-overlay),.12) 100%),
+      linear-gradient(to top, rgba(var(--hero-overlay),1) 0%, rgba(var(--hero-overlay),0) 30%);
+    pointer-events:none;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background-image:repeating-linear-gradient(115deg, rgba(165,18,31,.03) 0 1px, transparent 1px 140px);
+  }
+  .hero-inner{position:relative;z-index:1;padding-block:60px}
+  .tag{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:7px 16px;border-radius:999px;
+    background:rgba(165,18,31,.12);border:1px solid rgba(165,18,31,.45);
+    color:var(--accent-text);font-size:12.5px;font-weight:700;letter-spacing:.6px;
+    text-transform:uppercase;
+  }
+  .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red-light)}
+  h1{
+    font-size:clamp(46px,7.8vw,100px);
+    line-height:.98;
+    margin:22px 0 26px;
+    max-width:14ch;
+    text-wrap:balance;
+    color:var(--text);
+    letter-spacing:-.5px;
+  }
+  h1 .stroke{color:var(--accent-text)}
+  .lead{max-width:46ch;color:var(--text);opacity:.82;font-size:clamp(16px,1.6vw,19px);line-height:1.7}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:15px 26px;text-decoration:none;font-weight:600;
+    border-radius:var(--radius-btn);font-size:15px;transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--gold);color:#fff}
+  .btn-primary:hover{background:var(--gold-light)}
+  .btn-ghost{border:1px solid var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--gold)}
+  .btn-whats{background:var(--whats);color:#fff}
+  .btn-whats:hover{background:#33c46f}
+
+  .hero-stats{display:flex;gap:clamp(20px,4vw,52px);margin-top:56px;flex-wrap:wrap}
+  .stat b{font-family:'Oswald',Arial,sans-serif;font-size:clamp(24px,3vw,34px);display:block;color:var(--accent-text)}
+  .stat span{color:var(--muted);font-size:13.5px}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:clamp(64px,9vw,110px) 0}
+
+  /* ---------- NAV ACTIVE STATE (scroll-based) ---------- */
+  .nav-links a.active{color:var(--accent-text)}
+
+  /* ---------- TRUST BAR ---------- */
+  .trust-bar{background:var(--red);color:#fff}
+  .trust-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:26px 0}
+  .trust-item{display:flex;align-items:center;gap:12px;justify-content:center;font-size:14px;font-weight:600;line-height:1.3}
+  .trust-item svg{width:26px;height:26px;flex:0 0 auto;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- SCROLL REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.is-visible{opacity:1;transform:none}
+  .cards .reveal:nth-child(2){transition-delay:.05s}
+  .cards .reveal:nth-child(3){transition-delay:.1s}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  /* ---------- DIVISOR ---------- */
+  .section-head{max-width:640px;margin:0 0 46px}
+  .section-head h2{font-size:clamp(28px,4vw,42px);line-height:1.1}
+  .section-head p{color:var(--muted);margin-top:14px;font-size:16px;line-height:1.7}
+  .services{background:var(--section-a)}
+
+  /* ---------- CRAFT / SPLIT LAYOUT ---------- */
+  .craft{
+    position:relative;
+    border-top:1px solid var(--line);
+    background:var(--section-b);
+    isolation:isolate;
+    overflow:hidden;
+  }
+  .craft::before{
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(ellipse at 10% 50%, rgba(165,18,31,var(--tint-strong)) 0%, transparent 50%);
+  }
+  .craft{padding-block:clamp(80px,10vw,120px)}
+  .craft-inner{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;
+  }
+  .craft-copy h2{font-size:clamp(26px,3.4vw,40px);max-width:16ch;line-height:1.1;color:var(--text)}
+  .craft-copy p{color:var(--muted);margin-top:18px;line-height:1.75;font-size:15.5px}
+  .craft-list{
+    list-style:none;margin:32px 0 0;padding:0;
+    display:grid;gap:12px;
+  }
+  .craft-list li{
+    display:flex;gap:14px;align-items:flex-start;color:var(--text);font-size:14.5px;line-height:1.5;
+    padding:14px 16px;
+    border-left:2px solid var(--red);
+    background:rgba(165,18,31,.04);
+    border-radius:0 var(--radius-btn) var(--radius-btn) 0;
+  }
+  .craft-list li::before{
+    content:"";flex:0 0 auto;width:20px;height:20px;margin-top:1px;border-radius:5px;
+    background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/13px no-repeat;
+  }
+
+  /* Craft visual (image panel) */
+  .craft-visual{
+    position:relative;border-radius:14px;overflow:hidden;
+    aspect-ratio:3/4;
+    box-shadow:0 30px 70px rgba(0,0,0,.4), 0 0 0 1px var(--line);
+  }
+  .craft-visual img{
+    width:100%;height:100%;object-fit:cover;
+    object-position:65% center;
+    display:block;
+    filter:saturate(1.1) brightness(.88);
+  }
+  .craft-visual::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(160deg, rgba(10,11,12,.45) 0%, transparent 55%);
+    pointer-events:none;
+  }
+  :root[data-theme="light"] .craft-visual img{filter:saturate(1.1) brightness(.95)}
+  :root[data-theme="light"] .craft-visual::after{
+    background:linear-gradient(160deg, rgba(245,244,241,.3) 0%, transparent 55%);
+  }
+
+  @media (max-width:860px){
+    .craft-inner{grid-template-columns:1fr;gap:40px}
+    .craft-visual{
+      order:-1;aspect-ratio:16/9;
+      border-radius:12px;
+    }
+  }
+
+  /* ---------- WHY / DIFERENCIAIS — editorial numbers ---------- */
+  .why{background:var(--section-a)}
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,3vw,40px)}
+  .why-item{
+    border:1px solid var(--line);
+    border-radius:var(--radius-btn);
+    padding:clamp(24px,3vw,40px);
+    position:relative;overflow:hidden;
+    background:var(--section-b);
+    transition:border-color .25s ease, transform .25s ease;
+  }
+  .why-item:hover{border-color:rgba(165,18,31,.3);transform:translateY(-4px)}
+  .why-item-num{
+    display:block;
+    font-family:'Oswald',Arial,sans-serif;
+    font-size:clamp(56px,7vw,80px);font-weight:700;
+    color:var(--red);opacity:.1;
+    line-height:1;margin-bottom:16px;
+    letter-spacing:-1px;
+  }
+  .why-item h3{font-size:18px;margin-bottom:10px;color:var(--text)}
+  .why-item p{color:var(--muted);font-size:14.5px;line-height:1.65;margin:0}
+
+  /* ---------- SERVICES ---------- */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    position:relative;
+    display:flex;flex-direction:column;
+    padding:30px 26px 24px;
+    background:var(--section-a);
+    border:1px solid var(--line);
+    border-radius:var(--radius-btn);
+    min-height:210px;
+    box-shadow:0 6px 22px rgba(0,0,0,.08);
+    overflow:hidden;
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  /* barra superior que anima no hover */
+  .card::before{
+    content:"";position:absolute;top:0;left:0;height:3px;width:100%;
+    background:var(--red);transform:scaleX(0);transform-origin:left;
+    transition:transform .3s ease;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 16px 38px rgba(0,0,0,.16);border-color:transparent}
+  .card:hover::before{transform:scaleX(1)}
+  .card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .card-icon{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:48px;height:48px;border-radius:12px;
+    background:rgba(165,18,31,.08);color:var(--accent-text);
+    transition:background .2s ease, transform .2s ease;
+  }
+  .card:hover .card-icon{background:var(--red);color:#fff;transform:rotate(-6deg)}
+  .card-icon svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .card .num{color:var(--muted);font-family:'Oswald',Arial,sans-serif;font-size:26px;font-weight:700;opacity:.35;line-height:1}
+  .card h3{margin:0 0 10px;font-size:19px}
+  .card p{color:var(--muted);line-height:1.65;margin:0 0 20px;font-size:14.5px}
+
+  /* ver todos os serviços */
+  .card-extra{display:none}
+  .cards.expanded .card-extra{display:flex}
+  .services-more{display:flex;justify-content:center;margin-top:32px}
+  .services-more .btn{cursor:pointer}
+
+  /* rodapé do card: label piscante + botão circular do WhatsApp */
+  .card-cta{margin-top:auto;display:flex;align-items:center;justify-content:flex-end;gap:10px}
+  .card-cta-label{
+    display:inline-flex;align-items:center;gap:8px;
+    font-weight:700;font-size:13px;color:var(--whats);
+    animation:blinkCta 1.1s ease-in-out infinite;
+  }
+  .card-cta-label .arrow{font-size:16px;line-height:1;animation:pointArrow 1.1s ease-in-out infinite}
+  .card-whats{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:34px;height:34px;flex:0 0 auto;
+    border-radius:50%;
+    background:var(--whats);color:#fff;text-decoration:none;
+    box-shadow:0 3px 10px rgba(47,174,99,.4);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card-whats:hover{transform:scale(1.08)}
+  .card-whats svg{width:17px;height:17px;fill:currentColor}
+
+  @keyframes blinkCta{
+    0%,100%{opacity:1}
+    50%{opacity:.25}
+  }
+  @keyframes pointArrow{
+    0%,100%{transform:translateX(0)}
+    50%{transform:translateX(6px)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .card-cta-label,.card-cta-label .arrow{animation:none}
+  }
+
+  /* why-item styles now defined in CRAFT/WHY block above */
+
+  /* ---------- CONTACT ---------- */
+  .reviews{background:var(--section-b)}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{
+    margin:0;background:var(--section-a);border:1px solid var(--line);
+    border-radius:var(--radius-btn);padding:26px 24px;
+    box-shadow:0 6px 22px rgba(0,0,0,.06);
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .stars{color:#f5a623;font-size:16px;letter-spacing:2px;line-height:1}
+  .review blockquote{margin:0;color:var(--text);line-height:1.7;font-size:15px}
+  .review figcaption{display:flex;align-items:center;gap:12px;margin-top:auto}
+  .review-avatar{
+    display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
+    width:44px;height:44px;border-radius:50%;
+    background:var(--red);color:#fff;font-family:'Oswald',Arial,sans-serif;font-weight:700;font-size:15px;
+  }
+  .review figcaption b{display:block;font-size:15px;color:var(--text)}
+  .review figcaption small{color:var(--muted);font-size:13px}
+  .reviews-note{margin:26px 0 0;text-align:center;color:var(--muted);font-size:12.5px;opacity:.8}
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--section-b);
+    text-align:left;
+    position:relative;
+    border-top:1px solid var(--line);
+    overflow:hidden;
+  }
+  .contact::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse at 80% 50%, rgba(165,18,31,var(--tint-strong)) 0%, transparent 55%);
+  }
+  .contact-grid{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,5vw,60px);align-items:start
+  }
+  .contact h2{
+    font-size:clamp(32px,4.5vw,52px);
+    max-width:12ch;color:var(--text);
+    line-height:1.05;
+  }
+  .contact p.lead-c{color:var(--muted);margin-top:18px;max-width:44ch;line-height:1.7;font-size:15.5px}
+  .contact-actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .info-card{
+    border:1px solid var(--line);
+    background:var(--section-a);
+    padding:clamp(22px,3vw,32px);
+    border-radius:var(--radius-btn);
+  }
+  .info-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .info-row:last-child{border-bottom:none;padding-bottom:0}
+  .info-row:first-child{padding-top:0}
+  .info-row b{display:block;font-size:13px;color:var(--accent-text);margin-bottom:4px;letter-spacing:.4px;text-transform:uppercase}
+  .info-row span{color:var(--muted);font-size:14.5px;line-height:1.55}
+
+  footer{
+    padding:64px 6% 0;color:var(--muted);border-top:1px solid var(--line);font-size:14px;
+    background:var(--section-b);
+  }
+  .footer-grid{
+    display:grid;grid-template-columns:2fr 1fr 1.2fr;gap:40px;
+    padding-bottom:40px;
+  }
+  .footer-brand .logo{font-family:'Oswald',Arial,sans-serif;font-weight:700;font-size:22px;letter-spacing:.5px}
+  .footer-brand .logo .accent{color:var(--accent-text)}
+  .footer-brand p{margin:14px 0 18px;max-width:34ch;line-height:1.7}
+  .footer-social{display:flex;gap:12px}
+  .footer-social a{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:40px;height:40px;border-radius:50%;
+    border:1px solid var(--line);color:var(--text);
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .footer-social a:hover{background:var(--red);color:#fff;border-color:var(--red)}
+  .footer-social svg{width:20px;height:20px;fill:currentColor}
+  .footer-social a:last-child svg{fill:none}
+  footer h4{font-family:'Oswald',Arial,sans-serif;font-size:15px;letter-spacing:.5px;color:var(--text);margin:0 0 16px;text-transform:uppercase}
+  footer ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  footer ul a{color:var(--muted);text-decoration:none;transition:color .15s ease}
+  footer ul a:hover{color:var(--accent-text)}
+  .footer-bottom{
+    border-top:1px solid var(--line);padding:20px 0;text-align:center;font-size:13px;
+  }
+  @media (max-width:860px){
+    .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+    .footer-brand{grid-column:1 / -1}
+  }
+  @media (max-width:480px){
+    .footer-grid{grid-template-columns:1fr}
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:960px){
+    .contact-grid{grid-template-columns:1fr}
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:720px){
+    .cards{grid-template-columns:1fr}
+    .hero-stats{gap:30px}
+    .trust-inner{grid-template-columns:1fr 1fr;gap:16px 12px}
+    .trust-item{justify-content:flex-start;font-size:13px}
+    .hero-bg{
+      background-size:cover;
+      background-position:70% center;
+    }
+    .hero::before{
+      background:
+        linear-gradient(to bottom, rgba(var(--hero-overlay),.88) 0%, rgba(var(--hero-overlay),.75) 45%, rgba(var(--hero-overlay),.92) 75%, rgba(var(--hero-overlay),1) 100%);
+    }
+  }
+  @media (max-width:520px){
+    .wrap{width:90%}
+    section{padding:52px 0}
+    .why-grid{grid-template-columns:1fr}
+    .hero-ctas{flex-direction:column;align-items:stretch}
+    .reviews-grid{grid-template-columns:1fr}
+    .btn{justify-content:center;padding:16px 24px;font-size:16px}
+    .logo{font-size:17px}
+    /* respiro e leitura no mobile */
+    .section-head{margin-bottom:32px}
+    .hero-inner{padding-block:40px}
+    h1{margin:14px 0 18px;font-size:clamp(38px,10.5vw,54px);letter-spacing:-.2px}
+    .lead{font-size:16px}
+    .hero-stats{gap:24px;margin-top:40px}
+    /* cards: mais compactos e botão maior para o dedo */
+    .card{padding:24px 20px 20px;min-height:0}
+    .card-cta{flex-wrap:wrap;gap:8px}
+    .card-cta-label{font-size:12px}
+    .card-whats{width:44px;height:44px}
+    .card-whats svg{width:22px;height:22px}
+    /* contato empilha bem */
+    .contact-grid{gap:32px}
+    .info-card{padding:22px}
+    /* FAB e botão de tema com área de toque cheia */
+    .fab-whats{width:60px;height:60px;right:16px;bottom:16px}
+    .fab-whats svg{width:30px;height:30px}
+  }
+
+  @media (max-width:360px){
+    .logo small{display:none}
+    .hero-stats{flex-direction:column;gap:16px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none !important}
+  }
+
+  /* ===== HERO CINEMATIC UPGRADE ===== */
+  /* Extra scale for cursor parallax headroom (desktop only) */
+  @media (hover:hover) and (pointer:fine){
+    .hero-bg{ transform:scale(1.09); transform-origin:center; will-change:transform; }
+  }
+
+  /* GSAP initial states — hidden until JS animates them in */
+  .hero-tag{
+    display:inline-flex;
+    opacity:0; transform:translateY(10px);
+    margin-bottom:26px;
+  }
+  .hero-line-wrap{
+    display:block; overflow:hidden;
+    padding-bottom:.04em; /* prevent descender clip */
+  }
+  .hero-line{
+    display:block; transform:translateY(104%);
+    will-change:transform;
+  }
+  .hero-lead{ opacity:0; transform:translateY(16px); }
+  .hero-ctas{
+    display:flex; flex-wrap:wrap; gap:14px; margin-top:36px;
+    opacity:0; transform:translateY(16px);
+  }
+  .hero-stats{ opacity:0; transform:translateY(16px); }
+
+  /* Fallback for no-JS / prefers-reduced-motion */
+  @media (prefers-reduced-motion:reduce){
+    .hero-bg{ transform:none !important; }
+    .hero-tag,.hero-line,.hero-lead,.hero-ctas,.hero-stats{
+      opacity:1 !important; transform:none !important;
+    }
+  }
+
+  /* Hero CTA — WhatsApp */
+  .btn-whats-hero{
+    background:var(--whats); color:#fff;
+    font-size:15.5px; padding:16px 28px;
+    box-shadow:0 4px 22px rgba(47,174,99,.3);
+    transition:transform .2s ease, box-shadow .2s ease, background .15s ease;
+  }
+  .btn-whats-hero svg{ fill:currentColor; flex:0 0 auto; }
+  .btn-whats-hero:hover{
+    background:#33c46f;
+    transform:translateY(-2px);
+    box-shadow:0 8px 30px rgba(47,174,99,.42);
+  }
+
+  /* Contact CTA spacing */
+  .contact-actions{ margin-top:28px; display:flex; flex-wrap:wrap; gap:12px; }
+
+  /* Hero CTA — ghost outline */
+  .btn-hero-ghost{
+    border:1px solid rgba(255,255,255,.22);
+    background:rgba(255,255,255,.04);
+    color:var(--text);
+    font-size:15.5px; padding:16px 24px;
+    backdrop-filter:blur(4px);
+  }
+  :root[data-theme="light"] .btn-hero-ghost{
+    border-color:var(--line);
+    background:rgba(0,0,0,.025);
+  }
+  .btn-hero-ghost:hover{ border-color:var(--gold); color:var(--accent-text); }
+
+  /* ===== CARD HOVER UPGRADE ===== */
+  .card:hover{
+    transform:translateY(-8px) scale(1.006);
+    box-shadow:
+      0 22px 52px rgba(0,0,0,.2),
+      0 0 0 1px rgba(165,18,31,.12),
+      inset 0 0 44px rgba(165,18,31,.04);
+    border-color:rgba(165,18,31,.14);
+  }
+
+  /* ===== EYEBROW LABEL (editorial) ===== */
+  .eyebrow{
+    display:block;
+    font-family:'Inter',sans-serif;
+    font-size:11px; font-weight:700;
+    letter-spacing:2.6px; text-transform:uppercase;
+    color:var(--accent-text); margin-bottom:14px;
+  }
+
+  /* ===== INTRO: MONTAGEM DO CARRO ===== */
+  .car-intro{
+    position:fixed; inset:0; z-index:9999;
+    display:flex; align-items:center; justify-content:center;
+    background:radial-gradient(ellipse at center, #101113 0%, #060707 70%, #030404 100%);
+    opacity:1; transition:opacity .8s ease, visibility .8s ease;
+  }
+  .car-intro.is-hidden{ opacity:0; visibility:hidden; pointer-events:none; }
+  .car-intro-inner{
+    width:min(94%, 900px);
+    display:flex; flex-direction:column; align-items:center; gap:22px;
+    text-align:center;
+  }
+  /* Palco com a mesma proporção da foto original (1920x1280) */
+  .car-stage{
+    position:relative; width:100%;
+    aspect-ratio:1920/1280;
+    filter:drop-shadow(0 30px 40px rgba(0,0,0,.55));
+  }
+  .car-frame{
+    position:absolute; height:auto; display:block;
+    opacity:0; will-change:transform, opacity;
+    transform:translate(var(--tx,0), var(--ty,0)) rotate(var(--rot,0));
+    backface-visibility:hidden;
+  }
+  /* Ao ativar, cada quadro desliza suavemente da sua origem até a montagem */
+  .car-intro.play .car-frame{
+    animation:frameAssemble 1.15s cubic-bezier(.16,.7,.2,1) forwards;
+    animation-delay:var(--delay,0s);
+  }
+  /* Desmontagem: peças voltam para a posição de origem (ordem inversa) */
+  .car-intro.reverse .car-frame{
+    animation:frameDisassemble .95s cubic-bezier(.5,0,.75,.4) both;
+    animation-delay:var(--rdelay,0s);
+  }
+
+  .car-intro-caption{
+    margin:0; color:var(--text);
+    font-size:clamp(18px,3.2vw,26px); font-weight:800; letter-spacing:.3px;
+    display:flex; flex-direction:column; gap:6px;
+    opacity:0; animation:carCaptionIn .8s ease forwards; animation-delay:2.15s;
+  }
+  .car-intro-caption span{
+    font-size:12px; font-weight:600; letter-spacing:1.5px;
+    text-transform:uppercase; color:var(--muted);
+  }
+  .car-intro.reverse .car-intro-caption{
+    animation:none; opacity:0; transition:opacity .5s ease;
+  }
+
+  @keyframes frameAssemble{
+    0%   { opacity:0; transform:translate(var(--tx,0), var(--ty,0)) rotate(var(--rot,0)); }
+    35%  { opacity:1; }
+    100% { opacity:1; transform:translate(0,0) rotate(0); }
+  }
+  @keyframes frameDisassemble{
+    0%   { opacity:1; transform:translate(0,0) rotate(0); }
+    65%  { opacity:1; }
+    100% { opacity:0; transform:translate(var(--tx,0), var(--ty,0)) rotate(var(--rot,0)); }
+  }
+  @keyframes carCaptionIn{ from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
+
+  @media (prefers-reduced-motion:reduce){
+    .car-intro.play .car-frame{ animation:none; opacity:1; transform:none; }
+    .car-intro-caption{ animation:none; opacity:1; }
+  }
+
+  /* ---------- FAB WHATSAPP ---------- */
+  .fab-whats{
+    position:fixed;right:20px;bottom:20px;z-index:40;
+    width:56px;height:56px;border-radius:50%;
+    background:var(--whats);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.35);
+    text-decoration:none;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .fab-whats:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,.45)}
+  .fab-whats svg{width:28px;height:28px;fill:currentColor}
+
+  /* ---------- VOLTAR AO TOPO ---------- */
+  .back-to-top{
+    position:fixed;right:20px;bottom:88px;z-index:41;
+    width:44px;height:44px;border-radius:50%;
+    background:var(--panel);color:var(--text);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+    opacity:0;visibility:hidden;transform:translateY(10px);
+    transition:opacity .25s ease, transform .25s ease, visibility .25s ease, background .15s ease;
+  }
+  .back-to-top.show{opacity:1;visibility:visible;transform:none}
+  .back-to-top:hover{background:var(--red);color:#fff;border-color:var(--red)}
+  .back-to-top svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- CTA FIXO INFERIOR (MOBILE) ---------- */
+  .mobile-cta{display:none}
+  @media (max-width:720px){
+    .mobile-cta{
+      display:flex;gap:10px;
+      position:fixed;left:0;right:0;bottom:0;z-index:45;
+      padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+      background:var(--panel);border-top:1px solid var(--line);
+      box-shadow:0 -4px 18px rgba(0,0,0,.14);
+    }
+    .mobile-cta a{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      height:50px;border-radius:var(--radius-btn);
+      font-weight:700;font-size:15px;text-decoration:none;
+    }
+    .mobile-cta svg{width:22px;height:22px;fill:currentColor;flex:0 0 auto}
+    .mobile-cta-whats{flex:1;background:var(--whats);color:#fff}
+    /* no mobile a barra assume; esconde o FAB e afasta o rodapé/FAB da barra */
+    .fab-whats{display:none}
+    footer{padding-bottom:84px}
+    .back-to-top{bottom:84px;right:16px}
+  }
+
+  /* ---------- SKIP INTRO ---------- */
+  .skip-intro{
+    position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+    background:rgba(255,255,255,.12);color:var(--muted);border:1px solid rgba(255,255,255,.18);
+    padding:8px 20px;border-radius:20px;font-size:13px;font-weight:500;
+    cursor:pointer;z-index:10000;backdrop-filter:blur(4px);
+    transition:opacity .3s ease, background .2s ease;
+  }
+  .skip-intro:hover{background:rgba(255,255,255,.22);color:#fff}
+  .car-intro.is-hidden .skip-intro{opacity:0;pointer-events:none}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Auto Care Estética Automotiva",
+  "description":"Estética automotiva em Garça/SP: polimento, lavagem e higienização interna, restauração e troca de faróis, para-choque, retrovisor, maçaneta, fechaduras, vidro elétrico e iluminação.",
+  "url":"https://autocare-garca.com.br/",
+  "telephone":"+5514997024535",
+  "address":{"@type":"PostalAddress","streetAddress":"R. Dep. Manoel Joaquim Fernandes Rebelo","addressLocality":"Garça","addressRegion":"SP","addressCountry":"BR"},
+  "geo":{"@type":"GeoCoordinates","latitude":"-22.2114","longitude":"-49.6557"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}],
+  "sameAs":["https://www.instagram.com/autocare_automotiva"]
+}
+</script>
+</head>
+<body>
+<!-- ===== INTRO: MONTAGEM DO CARRO ===== -->
+<div id="carIntro" class="car-intro" aria-hidden="true">
+  <div class="car-intro-inner">
+    <div class="car-stage" role="img" aria-label="Montagem das peças do carro">
+      <img class="car-frame" data-frame="body" src="parts/body.webp" alt="" loading="eager" style="left:11.04%;top:9.06%;width:79.11%;--tx:0%;--ty:-60%;--rot:4deg;--delay:0.00s;--rdelay:0.96s;">
+      <img class="car-frame" data-frame="underbody" src="parts/underbody.webp" alt="" loading="eager" style="left:41.67%;top:56.09%;width:42.81%;--tx:0%;--ty:55%;--rot:0deg;--delay:0.12s;--rdelay:0.84s;">
+      <img class="car-frame" data-frame="wheels" src="parts/wheels.webp" alt="" loading="eager" style="left:36.61%;top:75.86%;width:23.33%;--tx:0%;--ty:65%;--rot:0deg;--delay:0.24s;--rdelay:0.72s;">
+      <img class="car-frame" data-frame="drivetrain" src="parts/drivetrain.webp" alt="" loading="eager" style="left:10.47%;top:52.27%;width:29.69%;--tx:-65%;--ty:15%;--rot:-22deg;--delay:0.36s;--rdelay:0.60s;">
+      <img class="car-frame" data-frame="interior" src="parts/interior.webp" alt="" loading="eager" style="left:31.09%;top:33.20%;width:31.30%;--tx:0%;--ty:35%;--rot:0deg;--delay:0.48s;--rdelay:0.48s;">
+      <img class="car-frame" data-frame="door" src="parts/door.webp" alt="" loading="eager" style="left:63.39%;top:46.41%;width:19.84%;--tx:60%;--ty:-25%;--rot:16deg;--delay:0.60s;--rdelay:0.36s;">
+      <img class="car-frame" data-frame="rear" src="parts/rear.webp" alt="" loading="eager" style="left:78.59%;top:26.25%;width:15.21%;--tx:70%;--ty:-18%;--rot:20deg;--delay:0.72s;--rdelay:0.24s;">
+      <img class="car-frame" data-frame="front" src="parts/front.webp" alt="" loading="eager" style="left:7.86%;top:29.77%;width:31.87%;--tx:-70%;--ty:8%;--rot:-16deg;--delay:0.84s;--rdelay:0.12s;">
+      <img class="car-frame" data-frame="roof" src="parts/roof.webp" alt="" loading="eager" style="left:41.04%;top:3.20%;width:29.38%;--tx:0%;--ty:-75%;--rot:0deg;--delay:0.96s;--rdelay:0.00s;">
+    </div>
+
+    <p class="car-intro-caption">Montando cada detalhe<span>Auto Care · Estética Automotiva</span></p>
+  </div>
+  <button class="skip-intro" id="skipIntro">Pular intro</button>
+</div>
+<!-- ===== /INTRO ===== -->
+
+<header class="site-nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <div class="logo">AUTO <span class="accent">CARE</span></div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a class="nav-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Auto%20Care." target="_blank" rel="noopener">Agendar horário</a></li>
+    </ul>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<section class="hero">
+  <div class="hero-bg" role="presentation"></div>
+  <div class="wrap hero-inner">
+    <div class="tag hero-tag">Estética Automotiva <span aria-hidden="true" style="margin-inline:.18em">·</span> Garça/SP</div>
+    <h1>
+      <span class="hero-line-wrap"><span class="hero-line">Cada detalhe</span></span>
+      <span class="hero-line-wrap"><span class="hero-line">do seu carro</span></span>
+      <span class="hero-line-wrap"><span class="hero-line stroke">merece cuidado.</span></span>
+    </h1>
+    <p class="lead hero-lead">Lavagem, higienização, polimento técnico e proteção de pintura com o mesmo padrão de atenção que uma montadora dá a cada peça do veículo.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-whats-hero" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Auto%20Care." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a class="btn btn-hero-ghost" href="#servicos">Ver serviços</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>11</b><span>serviços especializados</span></div>
+      <div class="stat"><b>100%</b><span>atendimento com hora marcada</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="wrap trust-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <span>Atendimento com<br>hora marcada</span>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      <span>Orçamento sem<br>compromisso</span>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg>
+      <span>Garça/SP e<br>região</span>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>Resposta rápida<br>no WhatsApp</span>
+    </div>
+  </div>
+</div>
+
+<section class="craft" id="sobre" aria-label="Nossa abordagem de trabalho">
+  <div class="wrap craft-inner">
+    <div class="craft-copy reveal">
+      <span class="eyebrow">Nossa abordagem</span>
+      <h2>Pensamos no carro peça por peça.</h2>
+      <p>Um veículo é a soma de centenas de componentes: pintura, vidros, bancos, plásticos, rodas. Nosso processo trata cada um de forma específica, com o produto e a técnica corretos para o material.</p>
+      <ul class="craft-list">
+        <li>Diagnóstico da pintura antes de qualquer polimento</li>
+        <li>Produtos específicos para couro, tecido e plástico interno</li>
+        <li>Proteção pensada para o uso real do seu carro no dia a dia</li>
+        <li>Revisão final item a item antes da entrega</li>
+      </ul>
+    </div>
+    <div class="craft-visual reveal">
+      <img src="hero.webp" alt="Veículo em processo de estética automotiva na Auto Care" loading="lazy" width="800" height="1067">
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Nossos serviços</h2>
+      <p>Cada serviço é feito de forma individual e especializada. Escolha o que precisa e fale direto com a gente pelo WhatsApp.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9c3 0 5 2 5 5s-2 4-5 4H3z"/><path d="M3 12a9 9 0 0 0 9 9c3 0 5-2 5-5"/><path d="M20 8l2-1M20 12h2M20 16l2 1"/></svg></span>
+          <span class="num">01</span>
+        </div>
+        <h3>Restauração de farol</h3>
+        <p>Recuperação da transparência e do brilho dos faróis desgastados.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Restaura%C3%A7%C3%A3o%20de%20farol%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9c3 0 5 2 5 5s-2 4-5 4H3z"/><path d="M20 5l2 2-2 2"/><path d="M22 7h-5"/></svg></span>
+          <span class="num">02</span>
+        </div>
+        <h3>Troca de farol</h3>
+        <p>Substituição de faróis danificados por novos, com ajuste correto.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Troca%20de%20farol%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 14c0-2 1-3 3-3h12c2 0 3 1 3 3v3H3z"/><path d="M6 17v2M18 17v2"/><path d="M3 14h18"/></svg></span>
+          <span class="num">03</span>
+        </div>
+        <h3>Para-choque</h3>
+        <p>Troca e reparo de para-choque para recuperar a aparência do veículo.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Para-choque%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="12" height="8" rx="4"/><path d="M16 9h3a2 2 0 0 1 2 2v0"/><path d="M12 13v6M9 19h6"/></svg></span>
+          <span class="num">04</span>
+        </div>
+        <h3>Retrovisor</h3>
+        <p>Troca e ajuste de retrovisor para segurança e visibilidade.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Retrovisor%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.4"/></svg></span>
+          <span class="num">05</span>
+        </div>
+        <h3>Manutenção de fechadura</h3>
+        <p>Reparo e manutenção de fechaduras e travas do veículo.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Manuten%C3%A7%C3%A3o%20de%20fechadura%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 11h18"/><path d="M8 18v2M16 18v2"/></svg></span>
+          <span class="num">06</span>
+        </div>
+        <h3>Vidro elétrico ou manual</h3>
+        <p>Manutenção da máquina de vidro elétrico ou manual.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Manuten%C3%A7%C3%A3o%20de%20vidro%20el%C3%A9trico%20ou%20manual%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal card-extra">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12h5a2 2 0 0 1 0 4H9z"/><path d="M9 12v4"/></svg></span>
+          <span class="num">07</span>
+        </div>
+        <h3>Maçaneta</h3>
+        <p>Troca e reparo de maçanetas internas e externas.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Ma%C3%A7aneta%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal card-extra">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10c1 1 1 2 1 3h6c0-1 0-2 1-3a6 6 0 0 0-4-10z"/></svg></span>
+          <span class="num">08</span>
+        </div>
+        <h3>Iluminação</h3>
+        <p>Manutenção e reparo do sistema de iluminação do veículo.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Ilumina%C3%A7%C3%A3o%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal card-extra">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z"/></svg></span>
+          <span class="num">09</span>
+        </div>
+        <h3>Polimento</h3>
+        <p>Polimento técnico para corrigir e revitalizar a pintura.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Polimento%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal card-extra">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M6 4h6a3 3 0 0 1 3 3v7H6z"/><path d="M6 14h12a2 2 0 0 1 2 2v3"/><path d="M6 14v6"/></svg></span>
+          <span class="num">10</span>
+        </div>
+        <h3>Lavagem de banco</h3>
+        <p>Lavagem e limpeza profunda dos bancos do veículo.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Lavagem%20de%20banco%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+      <article class="card reveal card-extra">
+        <div class="card-top">
+          <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M8 3h5l1 4H7z"/><path d="M7 7h7l1 6a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"/><path d="M10 16v4M14 16v4"/></svg></span>
+          <span class="num">11</span>
+        </div>
+        <h3>Higienização interna</h3>
+        <p>Higienização interna completa, com atenção aos detalhes.</p>
+        <div class="card-cta">
+          <span class="card-cta-label">Solicitar serviço! <span class="arrow" aria-hidden="true">&#10132;</span></span>
+          <a class="card-whats" target="_blank" rel="noopener" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Higieniza%C3%A7%C3%A3o%20interna%20na%20Auto%20Care.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+        </a>
+        </div>
+      </article>
+    </div>
+    <div class="services-more">
+      <button class="btn btn-ghost" id="toggleServices" type="button" aria-expanded="false">Ver todos os serviços</button>
+    </div>
+  </div>
+</section>
+<!-- Lista completa dos serviços realizados:
+     Restauração de farol, troca de farol, para-choque, retrovisor,
+     manutenção de fechadura, manutenção de vidro elétrico ou manual,
+     maçaneta, iluminação, polimento, lavagem de banco, higienização interna. -->
+<section id="diferenciais" class="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Diferenciais</span>
+      <h2>Por que escolher a Auto Care</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <span class="why-item-num" aria-hidden="true">01</span>
+        <h3>Atendimento com hora marcada</h3>
+        <p>Sem fila e sem espera: seu carro é atendido no horário combinado.</p>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-item-num" aria-hidden="true">02</span>
+        <h3>Produtos de qualidade</h3>
+        <p>Ceras, polidores e produtos de limpeza selecionados para cada tipo de superfície.</p>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-item-num" aria-hidden="true">03</span>
+        <h3>Equipe experiente</h3>
+        <p>Profissionais treinados em técnicas de polimento e conservação automotiva.</p>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-item-num" aria-hidden="true">04</span>
+        <h3>Orçamento sem compromisso</h3>
+        <p>Avaliação do veículo e valor combinado antes de iniciar qualquer serviço.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" aria-label="Depoimentos de clientes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Clientes</span>
+      <h2>O que dizem nossos clientes</h2>
+      <p>A satisfação de quem confia o carro à Auto Care.</p>
+    </div>
+    <div class="reviews-grid">
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 de 5 estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Deixei meu carro para restauração dos faróis e ficou como novo. Atendimento no horário e serviço impecável!</blockquote>
+        <figcaption><span class="review-avatar">MR</span><span><b>Marcos Ribeiro</b><small>Honda Civic</small></span></figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 de 5 estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Fiz a higienização interna completa e a lavagem dos bancos. Meu carro voltou com cheiro de novo. Recomendo demais!</blockquote>
+        <figcaption><span class="review-avatar">JS</span><span><b>Juliana Souza</b><small>Jeep Renegade</small></span></figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 de 5 estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>O vidro elétrico estava travado e resolveram no mesmo dia. Preço justo e muita atenção com o cliente.</blockquote>
+        <figcaption><span class="review-avatar">CA</span><span><b>Carlos Almeida</b><small>VW Gol</small></span></figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 de 5 estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Polimento excelente, tiraram todos os riscos da pintura. Profissionais que entendem do assunto de verdade.</blockquote>
+        <figcaption><span class="review-avatar">PF</span><span><b>Patrícia Fernandes</b><small>Toyota Corolla</small></span></figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 de 5 estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Troquei o retrovisor e o para-choque. Serviço rápido, bem feito e com orçamento sem enrolação. Voltarei sempre.</blockquote>
+        <figcaption><span class="review-avatar">RL</span><span><b>Rafael Lima</b><small>Fiat Argo</small></span></figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 de 5 estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Atendimento nota 10 pelo WhatsApp, marcaram hora e não precisei esperar. A Auto Care virou minha oficina de confiança.</blockquote>
+        <figcaption><span class="review-avatar">AM</span><span><b>Amanda Martins</b><small>Hyundai HB20</small></span></figcaption>
+      </figure>
+    </div>
+    <p class="reviews-note">Depoimentos ilustrativos.</p>
+  </div>
+</section>
+<section id="contato" class="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Fale conosco</span>
+      <h2>Seu carro merece esse cuidado.</h2>
+      <p class="lead-c">Entre em contato e agende seu horário na Auto Care, em Garça/SP. Respondemos rápido pelo WhatsApp.</p>
+      <div class="contact-actions">
+        <a class="btn btn-whats-hero" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Auto%20Care." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="info-card reveal">
+      <div class="info-row">
+        <div>
+          <b>Endereço</b>
+          <span>R. Dep. Manoel Joaquim Fernandes Rebelo, Garça/SP</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <div>
+          <b>WhatsApp</b>
+          <span>+55 14 99702-4535</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <div>
+          <b>Horário</b>
+          <span>Seg–Sex 08h–18h &nbsp;·&nbsp; Sáb 08h–12h</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="logo">AUTO <span class="accent">CARE</span></div>
+      <p>Estética automotiva e manutenção de acessórios em Garça/SP. Cada detalhe do seu carro com o cuidado que ele merece.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/5514997024535" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/autocare_automotiva" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#servicos">Polimento</a></li>
+        <li><a href="#servicos">Higienização interna</a></li>
+        <li><a href="#servicos">Faróis &amp; iluminação</a></li>
+        <li><a href="#servicos">Vidros &amp; fechaduras</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5514997024535" target="_blank" rel="noopener">+55 14 99702-4535</a></li>
+        <li>R. Dep. Manoel Joaquim<br>Fernandes Rebelo, Garça/SP</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footYear"></span> Auto Care · Estética Automotiva · Garça/SP</span>
+  </div>
+</footer>
+
+<a class="fab-whats" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Auto%20Care." target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" title="Voltar ao topo">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- CTA fixo inferior (apenas mobile) -->
+<div class="mobile-cta">
+  <a class="mobile-cta-whats" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Auto%20Care." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89z"/></svg>
+    Agendar pelo WhatsApp
+  </a>
+</div>
+
+<script>
+  /* ===== NAVEGAÇÃO SCROLL — destaca aba ativa por seção visível ===== */
+  (function(){
+    const navLinks = document.querySelectorAll('#navLinks a[href^="#"]');
+    const sectionIds = ['servicos','diferenciais','contato'];
+
+    function setActive(id){
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+    }
+
+    // Highlight the nav link of whichever section is most prominent in viewport
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) setActive(en.target.id); });
+    }, { threshold: 0.25, rootMargin: '-10% 0px -55% 0px' });
+
+    sectionIds.forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
+
+    // Default active on load
+    setActive('servicos');
+  })();
+
+  /* ===== ANO NO RODAPÉ ===== */
+  (function(){ var y=document.getElementById('footYear'); if(y) y.textContent=new Date().getFullYear(); })();
+
+  /* ===== VOLTAR AO TOPO ===== */
+  (function(){
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+    const onScroll = () => btn.classList.toggle('show', window.scrollY > 400);
+    window.addEventListener('scroll', onScroll, { passive:true });
+    onScroll();
+    btn.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+  })();
+
+  /* ===== VER TODOS OS SERVIÇOS ===== */
+  (function(){
+    const btn = document.getElementById('toggleServices');
+    const grid = document.querySelector('.cards');
+    if (!btn || !grid) return;
+    btn.addEventListener('click', () => {
+      const expanded = grid.classList.toggle('expanded');
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      btn.textContent = expanded ? 'Ver menos' : 'Ver todos os serviços';
+      // revela animação dos cards recém-exibidos
+      if (expanded) grid.querySelectorAll('.card-extra').forEach(c => c.classList.add('is-visible'));
+    });
+  })();
+
+  /* ===== SCROLL REVEAL ===== */  (function(){
+    const els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(e => e.classList.add('is-visible'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.classList.add('is-visible');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: .15, rootMargin: '0px 0px -60px 0px' });
+    els.forEach(e => io.observe(e));
+  })();
+
+  const nav = document.getElementById('siteNav');
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+
+  /* ===== TROCA DE TEMA (claro/escuro) ===== */
+  (function(){
+    const btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    const root = document.documentElement;
+    btn.addEventListener('click', () => {
+      const isLight = root.getAttribute('data-theme') === 'light';
+      const next = isLight ? 'dark' : 'light';
+      if (next === 'light') root.setAttribute('data-theme','light');
+      else root.removeAttribute('data-theme');
+      try { localStorage.setItem('ac_theme', next); } catch(e){}
+    });
+  })();
+
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  const overlay = document.getElementById('navOverlay');
+
+  function setMenu(open){
+    links.classList.toggle('open', open);
+    if (overlay) overlay.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  toggle.addEventListener('click', () => {
+    setMenu(!links.classList.contains('open'));
+  });
+
+  if (overlay) overlay.addEventListener('click', () => setMenu(false));
+
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => setMenu(false));
+  });
+
+  // fecha o menu ao redimensionar para desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860 && links.classList.contains('open')) setMenu(false);
+  });
+
+  /* ===== INTRO: MONTAGEM DO CARRO ===== */
+  (function(){
+    const intro = document.getElementById('carIntro');
+    if (!intro) return;
+
+    // Skip for returning visitors
+    if (sessionStorage.getItem('ac_intro_seen')) {
+      intro.remove();
+      return;
+    }
+
+    const frames = Array.from(intro.querySelectorAll('.car-frame'));
+    let closed = false;
+
+    function hideIntro(){
+      if (closed) return;
+      closed = true;
+      sessionStorage.setItem('ac_intro_seen', '1');
+      intro.classList.add('is-hidden');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        intro.remove();
+        document.dispatchEvent(new CustomEvent('ac:intro-done'));
+      }, 800);
+    }
+
+    function disassemble(){
+      if (closed) return;
+      // Encerra a montagem e dispara a desmontagem (peças voltam à origem)
+      intro.classList.remove('play');
+      intro.classList.add('reverse');
+    }
+
+    function start(){
+      if (closed) return;
+      // Dispara a montagem no próximo frame (transform inicial já aplicado)
+      requestAnimationFrame(() => requestAnimationFrame(() => intro.classList.add('play')));
+
+      // Linha do tempo:
+      // montagem ~2.1s -> apreciar -> desmontagem ~2.9s (dura ~1.9s) -> fecha ~4.9s
+      const tReverse = setTimeout(disassemble, 2900);
+      const autoClose = setTimeout(hideIntro, 4900);
+
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        clearTimeout(tReverse);
+        clearTimeout(autoClose);
+        setTimeout(hideIntro, 1400);
+      }
+    }
+
+    const skipBtn = document.getElementById('skipIntro');
+    if (skipBtn) skipBtn.addEventListener('click', hideIntro);
+
+    // Bloqueia o scroll durante a intro
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+
+    // Pré-carrega todas as peças para uma entrada suave (sem "piscar")
+    let pending = frames.length;
+    if (pending === 0){ start(); return; }
+    let started = false;
+    const kick = () => { if (!started){ started = true; start(); } };
+    frames.forEach(img => {
+      if (img.complete && img.naturalWidth){
+        if (--pending === 0) kick();
+      } else {
+        const done = () => { if (--pending === 0) kick(); };
+        img.addEventListener('load', done, { once:true });
+        img.addEventListener('error', done, { once:true });
+      }
+    });
+    // Fallback: não trava mais que 1.5s esperando imagens
+    setTimeout(kick, 1500);
+  })();
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+/* ===== GSAP CINEMATIC HERO ===== */
+(function(){
+  'use strict';
+  if (typeof gsap === 'undefined') return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  /* Build the hero entrance timeline */
+  function playHeroEntrance(delay) {
+    var tl = gsap.timeline({ delay: delay || 0 });
+    tl.to('.hero-tag',  { opacity:1, y:0, duration:.55, ease:'power2.out' })
+      .to('.hero-line', { y:'0%',    duration:.85, stagger:.13, ease:'power3.out' }, '-=.18')
+      .to('.hero-lead', { opacity:.82, y:0, duration:.60, ease:'power2.out' }, '-=.38')
+      .to('.hero-ctas', { opacity:1, y:0, duration:.55, ease:'power2.out' }, '-=.30')
+      .to('.hero-stats',{ opacity:1, y:0, duration:.50, ease:'power2.out' }, '-=.22');
+  }
+
+  /* Detect whether the car intro was already seen this session */
+  var introEl    = document.getElementById('carIntro');
+  var introSeen  = (function(){
+    try { return !!sessionStorage.getItem('ac_intro_seen'); } catch(e){ return false; }
+  })();
+
+  if (!introEl || introSeen) {
+    /* No intro overlay — play immediately after a short settle delay */
+    playHeroEntrance(0.35);
+  } else {
+    /* Wait for the intro to dispatch its done event (or fire if skipped) */
+    document.addEventListener('ac:intro-done', function(){ playHeroEntrance(0.2); }, { once: true });
+  }
+
+  /* ── Cursor parallax on hero background (desktop / fine pointer only) ── */
+  var heroBg = document.querySelector('.hero-bg');
+  if (heroBg && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var mx = 0, my = 0, cx = 0, cy = 0;
+    window.addEventListener('mousemove', function(e){
+      mx = ((e.clientX / window.innerWidth)  - .5) * 20;
+      my = ((e.clientY / window.innerHeight) - .5) * 11;
+    }, { passive: true });
+    (function loop(){
+      cx += (mx - cx) * .056;
+      cy += (my - cy) * .056;
+      heroBg.style.transform =
+        'translate(' + cx.toFixed(2) + 'px,' + cy.toFixed(2) + 'px) scale(1.09)';
+      requestAnimationFrame(loop);
+    })();
+  }
+
+})();
+</script>
+</body>
+</html>
