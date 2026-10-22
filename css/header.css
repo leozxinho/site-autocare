@@ -1,0 +1,70 @@
+/* =====================================================
+   HEADER
+===================================================== */
+.hdr {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 18px 0;
+  background: linear-gradient(to bottom, rgba(7,8,14,.96), rgba(7,8,14,0));
+  border-bottom: 1px solid transparent;
+  transition: background .3s, border-color .3s, backdrop-filter .3s;
+}
+.hdr.stuck {
+  background: rgba(7,8,14,.96);
+  border-bottom-color: var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+[data-theme="light"] .hdr {
+  background: linear-gradient(to bottom, rgba(244,242,237,.97), rgba(244,242,237,0));
+}
+[data-theme="light"] .hdr.stuck {
+  background: rgba(244,242,237,.97);
+  border-bottom-color: rgba(0,0,0,.09);
+}
+
+.hdr-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+
+/* Logo */
+.logo { display: flex; flex-direction: column; line-height: 1; user-select: none; text-decoration: none; }
+.logo-name {
+  font-family: var(--font-title); font-weight: 700;
+  font-size: clamp(18px, 2.8vw, 23px); letter-spacing: .3px; color: var(--text);
+}
+.logo-name em { color: var(--red2); font-style: normal; }
+.logo-sub {
+  font-size: 9px; font-weight: 600; letter-spacing: 2.4px;
+  text-transform: uppercase; color: var(--muted); margin-top: 2px;
+}
+
+/* Nav links (desktop) */
+.nav-links { display: none; gap: 28px; align-items: center; }
+.nav-links a {
+  font-size: 13.5px; font-weight: 500; color: var(--text2);
+  transition: color .15s;
+}
+.nav-links a:hover { color: var(--text); }
+@media (min-width: 768px) { .nav-links { display: flex; } }
+
+/* Ações no header */
+.hdr-actions { display: flex; align-items: center; gap: 10px; }
+
+.hdr-cta { padding: 10px 18px; font-size: 13.5px; }
+
+/* Botão tema */
+.theme-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+  background: var(--panel); border: 1px solid var(--border);
+  color: var(--text2);
+  transition: background .2s, border-color .2s, color .2s, transform .3s;
+}
+.theme-btn:hover  { background: var(--panelh); color: var(--text); }
+.theme-btn:active { transform: rotate(20deg); }
+.theme-btn svg {
+  width: 17px; height: 17px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+  transition: opacity .2s;
+}
+.theme-btn .icon-sun { display: none; }

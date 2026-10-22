@@ -1,0 +1,73 @@
+/* =====================================================
+   BEFORE / AFTER SLIDER
+===================================================== */
+.ba-wrap {
+  position: relative; overflow: hidden;
+  border-radius: var(--r);
+  aspect-ratio: 16 / 9;
+  touch-action: pan-y;
+  cursor: ew-resize;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Imagem "antes" */
+.ba-before, .ba-after {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+}
+.ba-before img, .ba-after img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block; pointer-events: none;
+}
+
+/* Imagem "depois" — clipada pela posição do slider */
+.ba-after {
+  clip-path: polygon(0 0, var(--ba, 50%) 0, var(--ba, 50%) 100%, 0 100%);
+  will-change: clip-path;
+}
+
+/* Linha divisória */
+.ba-line {
+  position: absolute; top: 0; bottom: 0; z-index: 2;
+  left: var(--ba, 50%); transform: translateX(-50%);
+  width: 2px; background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,.6);
+  will-change: left;
+}
+
+/* Alça do slider */
+.ba-handle {
+  position: absolute; top: 50%; z-index: 3;
+  left: var(--ba, 50%); transform: translate(-50%, -50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,.55);
+  display: flex; align-items: center; justify-content: center;
+  will-change: left;
+  cursor: ew-resize;
+}
+.ba-handle svg {
+  width: 20px; height: 20px;
+  fill: none; stroke: #333; stroke-width: 2; stroke-linecap: round;
+}
+
+/* Rótulos */
+.ba-labels {
+  position: absolute; bottom: 12px; left: 0; right: 0;
+  z-index: 2; display: flex; justify-content: space-between;
+  padding: 0 16px; pointer-events: none;
+}
+.ba-lbl-before, .ba-lbl-after {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: rgba(0,0,0,.55); color: #fff;
+  padding: 4px 10px; border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+/* Foco acessível */
+.ba-handle:focus-visible {
+  outline: 2px solid var(--red2); outline-offset: 3px;
+}

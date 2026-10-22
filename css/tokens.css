@@ -1,0 +1,70 @@
+/* =====================================================
+   TOKENS  —  todas as variáveis do sistema de design
+===================================================== */
+:root {
+  /* Cores base */
+  --bg:    #07080e;
+  --bg2:   #0b0d17;
+  --bg3:   #0e1020;
+  --panel: rgba(255,255,255,.04);
+  --panelh:rgba(255,255,255,.07);
+  --border:rgba(255,255,255,.08);
+
+  /* Marca */
+  --red:   #c4141f;
+  --red2:  #e5192a;
+  --rglow: rgba(229,25,42,.30);
+  --rtint: rgba(229,25,42,.08);
+  --rtint2:rgba(229,25,42,.14);
+
+  /* Texto */
+  --text:  #f0eee9;
+  --text2: rgba(240,238,233,.70);
+  --muted: #68717d;
+
+  /* WhatsApp */
+  --green: #25d366;
+  --gglow: rgba(37,211,102,.28);
+
+  /* Formas */
+  --r:   10px;
+  --rsm: 7px;
+
+  /* Safe area (notch/barra iOS) */
+  --safe: env(safe-area-inset-bottom, 0px);
+
+  /* Famílias tipográficas */
+  --font-title: 'Oswald', system-ui, sans-serif;
+  --font-body:  'Inter',  system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Space Grotesk', monospace;
+}
+
+/* =====================================================
+   TEMA CLARO
+===================================================== */
+[data-theme="light"] {
+  --bg:    #f4f2ed;
+  --bg2:   #edeae3;
+  --bg3:   #e6e2d9;
+  --panel: rgba(0,0,0,.045);
+  --panelh:rgba(0,0,0,.08);
+  --border:rgba(0,0,0,.09);
+  --text:  #13131a;
+  --text2: rgba(19,19,26,.60);
+  --muted: #898a93;
+  --rglow: rgba(229,25,42,.18);
+  --rtint: rgba(229,25,42,.07);
+  --rtint2:rgba(229,25,42,.13);
+}
+
+/* =====================================================
+   REDUZIR MOVIMENTO  —  overrides globais
+===================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

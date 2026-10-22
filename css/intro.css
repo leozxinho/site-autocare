@@ -1,0 +1,78 @@
+/* =====================================================
+   INTRO OVERLAY — LED DRL
+===================================================== */
+.intro {
+  position: fixed; inset: 0; z-index: 500;
+  background: #07080e;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 0;
+  pointer-events: all;
+  transition: opacity .6s ease;
+}
+.intro.done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Botão pular */
+.intro-skip {
+  position: absolute; top: 20px; right: 20px;
+  padding: 8px 18px;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.10);
+  border-radius: 999px;
+  font-size: 10.5px; font-weight: 600; letter-spacing: 1.8px;
+  text-transform: uppercase; color: rgba(255,255,255,.40);
+  transition: color .2s, background .2s, border-color .2s;
+  cursor: pointer; min-height: 44px; min-width: 44px;
+}
+.intro-skip:hover { color: #fff; background: rgba(255,255,255,.11); border-color: rgba(255,255,255,.2); }
+
+/* Container das linhas e logo */
+.intro-stage {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 28px;
+  width: min(340px, 80vw);
+}
+
+/* Faixas LED (DRL) */
+.intro-leds {
+  position: relative; width: 100%; height: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.intro-led {
+  position: absolute;
+  height: 2px; border-radius: 1px;
+  background: linear-gradient(90deg, transparent, var(--red2), var(--red2), transparent);
+  box-shadow: 0 0 8px var(--red2), 0 0 20px rgba(229,25,42,.5);
+  width: 0;
+  transition: width .7s cubic-bezier(.4, 0, .2, 1);
+}
+.intro-led-left  { right: 50%; transform-origin: right center; }
+.intro-led-right { left:  50%; transform-origin: left  center; }
+
+.intro-leds.light .intro-led { width: 50%; }
+
+/* Segundo par — largura menor */
+.intro-leds-2 { margin-top: -2px; }
+.intro-leds-2 .intro-led { transition-delay: .1s; }
+.intro-leds-2.light .intro-led { width: 35%; }
+
+/* Logo central */
+.intro-logo {
+  opacity: 0;
+  transform: scale(.94);
+  transition: opacity .5s ease .55s, transform .5s ease .55s;
+  text-align: center;
+}
+.intro-logo.show { opacity: 1; transform: none; }
+
+.intro-logo-name {
+  font-family: var(--font-title); font-weight: 700;
+  font-size: clamp(34px, 7vw, 52px); letter-spacing: 1px; color: #fff;
+  line-height: 1;
+}
+.intro-logo-name em { color: var(--red2); font-style: normal; }
+.intro-logo-sub {
+  font-size: 9px; font-weight: 600; letter-spacing: 3.5px;
+  text-transform: uppercase; color: rgba(255,255,255,.35); margin-top: 8px;
+}

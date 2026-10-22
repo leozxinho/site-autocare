@@ -1,0 +1,34 @@
+/* =====================================================
+   RESULTADOS — carrossel de antes/depois
+===================================================== */
+.results-sec { background: var(--bg); }
+
+.results-carousel {
+  display: flex; gap: 20px;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none; padding: 8px 0 16px;
+  -webkit-overflow-scrolling: touch;
+}
+.results-carousel::-webkit-scrollbar { display: none; }
+
+.result-item {
+  flex-shrink: 0; scroll-snap-align: start;
+  width: min(320px, 82vw);
+  display: flex; flex-direction: column; gap: 10px;
+}
+
+.result-label {
+  font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* Paginação */
+.results-dots {
+  display: flex; justify-content: center; gap: 7px; margin-top: 16px;
+}
+.r-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--border); transition: background .2s, width .2s;
+  cursor: pointer; min-width: 6px; min-height: 6px; border: none;
+}
+.r-dot.active { background: var(--red2); width: 20px; border-radius: 3px; }

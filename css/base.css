@@ -1,0 +1,136 @@
+/* =====================================================
+   RESET
+===================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; tab-size: 4; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; -webkit-tap-highlight-color: transparent; }
+ul { list-style: none; }
+svg { display: block; }
+
+/* =====================================================
+   GRADE DE FUNDO
+===================================================== */
+body::before {
+  content: "";
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.012) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(0,0,0,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.02) 1px, transparent 1px);
+}
+
+/* =====================================================
+   CONTAINER ÚNICO
+===================================================== */
+.c {
+  width: min(100% - 40px, 1280px);
+  margin-inline: auto;
+}
+@media (min-width: 640px)  { .c { width: min(100% - 64px,  1280px); } }
+@media (min-width: 1024px) { .c { width: min(100% - 96px,  1280px); } }
+
+section { padding: clamp(64px, 9vw, 120px) 0; }
+
+/* =====================================================
+   TIPOGRAFIA
+===================================================== */
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: .2px;
+}
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 2.8px;
+  text-transform: uppercase; color: var(--red2); margin-bottom: 14px;
+}
+.eyebrow::before {
+  content: "";
+  width: 22px; height: 2px;
+  background: var(--red2); border-radius: 1px; flex-shrink: 0;
+}
+
+.section-title { font-size: clamp(26px, 4vw, 46px); line-height: 1.08; }
+.section-sub   { font-size: 15px; color: var(--text2); line-height: 1.7; margin-top: 10px; max-width: 52ch; }
+
+/* Números e rótulos estilo HUD */
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  padding: 14px 24px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--r); border: none; text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  white-space: nowrap; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 48px;
+}
+.btn svg { flex-shrink: 0; }
+
+.btn-green {
+  background: var(--green); color: #fff;
+  box-shadow: 0 4px 22px var(--gglow);
+}
+.btn-green:hover  { background: #22c55e; box-shadow: 0 6px 30px rgba(37,211,102,.42); transform: translateY(-1px); }
+.btn-green:active { transform: scale(.97); }
+
+.btn-red {
+  background: var(--red); color: #fff;
+  box-shadow: 0 4px 22px var(--rglow);
+}
+.btn-red:hover  { background: var(--red2); box-shadow: 0 6px 30px rgba(229,25,42,.46); transform: translateY(-1px); }
+.btn-red:active { transform: scale(.97); }
+
+.btn-ghost {
+  background: var(--panel); color: var(--text2);
+  border: 1px solid var(--border); backdrop-filter: blur(6px);
+}
+.btn-ghost:hover  { background: var(--panelh); color: var(--text); border-color: rgba(255,255,255,.15); }
+.btn-ghost:active { transform: scale(.97); }
+
+[data-theme="light"] .btn-ghost {
+  background: rgba(0,0,0,.05); border-color: rgba(0,0,0,.12); color: var(--text2);
+}
+[data-theme="light"] .btn-ghost:hover { background: rgba(0,0,0,.09); color: var(--text); }
+
+.btn-lg   { padding: 17px 32px; font-size: 16px; }
+.btn-full { width: 100%; }
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+.rev {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.rev.on { opacity: 1; transform: none; }
+.rev[data-d="1"] { transition-delay: .10s; }
+.rev[data-d="2"] { transition-delay: .20s; }
+.rev[data-d="3"] { transition-delay: .30s; }

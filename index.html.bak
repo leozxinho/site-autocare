@@ -1,0 +1,1582 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07080e">
+<title>MB Garagem Automotiva | Estética Automotiva Garça/SP</title>
+<meta name="description" content="MB Garagem Automotiva em Garça/SP: polimento, lavagem, higienização, restauração de faróis, para-choque, retrovisor, maçaneta, fechaduras, vidro elétrico e iluminação com hora marcada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"MB Garagem Automotiva","telephone":"+5514997024535","address":{"@type":"PostalAddress","streetAddress":"R. Dep. Manoel Joaquim Fernandes Rebelo","addressLocality":"Garça","addressRegion":"SP","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}]}
+</script>
+<style>
+/* =====================================================
+   TOKENS
+===================================================== */
+:root{
+  --bg:       #07080e;
+  --bg2:      #0b0d17;
+  --bg3:      #0e1020;
+  --panel:    rgba(255,255,255,.04);
+  --panelh:   rgba(255,255,255,.07);
+  --border:   rgba(255,255,255,.08);
+  --red:      #c4141f;
+  --red2:     #e5192a;
+  --rglow:    rgba(229,25,42,.30);
+  --rtint:    rgba(229,25,42,.08);
+  --rtint2:   rgba(229,25,42,.14);
+  --text:     #f0eee9;
+  --text2:    rgba(240,238,233,.70);
+  --muted:    #68717d;
+  --green:    #25d366;
+  --gglow:    rgba(37,211,102,.28);
+  --r:        10px;
+  --rsm:      7px;
+  --safe:     env(safe-area-inset-bottom,0px);
+}
+
+/* =====================================================
+   LIGHT THEME
+===================================================== */
+[data-theme="light"]{
+  --bg:     #f4f2ed;
+  --bg2:    #edeae3;
+  --bg3:    #e6e2d9;
+  --panel:  rgba(0,0,0,.045);
+  --panelh: rgba(0,0,0,.08);
+  --border: rgba(0,0,0,.09);
+  --text:   #13131a;
+  --text2:  rgba(19,19,26,.60);
+  --muted:  #898a93;
+  --rglow:  rgba(229,25,42,.18);
+  --rtint:  rgba(229,25,42,.07);
+  --rtint2: rgba(229,25,42,.13);
+}
+[data-theme="light"] body::before{
+  background-image:
+    linear-gradient(rgba(0,0,0,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,0,0,.022) 1px,transparent 1px);
+}
+[data-theme="light"] .hdr{
+  background:linear-gradient(to bottom,rgba(244,242,237,.97),rgba(244,242,237,0));
+}
+[data-theme="light"] .hdr.stuck{
+  background:rgba(244,242,237,.97);
+  border-bottom-color:rgba(0,0,0,.09);
+}
+[data-theme="light"] .hero-bg{
+  background:
+    radial-gradient(ellipse 80% 60% at 65% 40%,rgba(229,25,42,.10) 0%,transparent 65%),
+    radial-gradient(ellipse 50% 50% at 15% 70%,rgba(229,25,42,.05) 0%,transparent 55%),
+    linear-gradient(160deg,#f8f6f0 0%,#f4f2ed 50%,#f0ede6 100%);
+}
+[data-theme="light"] .hero-ovl{
+  background:linear-gradient(to bottom,
+    rgba(244,242,237,.65) 0%,
+    rgba(244,242,237,.15) 40%,
+    rgba(244,242,237,.65) 72%,
+    rgba(244,242,237,1.00) 100%
+  );
+}
+[data-theme="light"] .hero::after{
+  background:repeating-linear-gradient(
+    90deg,transparent 0,transparent 64px,
+    rgba(229,25,42,.009) 64px,rgba(229,25,42,.009) 65px
+  );
+}
+[data-theme="light"] .hero-wm{
+  -webkit-text-stroke:1.5px rgba(229,25,42,.06);
+}
+[data-theme="light"] .btn-ghost{
+  background:rgba(0,0,0,.05);
+  border-color:rgba(0,0,0,.12);
+  color:var(--text2);
+}
+[data-theme="light"] .btn-ghost:hover{background:rgba(0,0,0,.09);color:var(--text)}
+
+/* =====================================================
+   RESET
+===================================================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;tab-size:4}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{cursor:pointer;font-family:inherit;border:none;background:none}
+
+/* =====================================================
+   GRID BACKGROUND TEXTURE
+===================================================== */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.014) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.014) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+
+/* =====================================================
+   CONTAINER  —  único, adaptativo, max 1280px
+===================================================== */
+.c{
+  width:min(100% - 40px, 1280px);
+  margin-inline:auto;
+}
+@media(min-width:640px){.c{width:min(100% - 64px, 1280px)}}
+@media(min-width:1024px){.c{width:min(100% - 96px, 1280px)}}
+
+section{padding:clamp(60px,9vw,120px) 0}
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+h1,h2,h3,h4{
+  font-family:'Oswald',system-ui,sans-serif;
+  font-weight:600;line-height:1.05;letter-spacing:.2px;
+}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:2.8px;
+  text-transform:uppercase;color:var(--red2);margin-bottom:14px;
+}
+.eyebrow::before{
+  content:"";width:22px;height:2px;
+  background:var(--red2);border-radius:1px;flex-shrink:0;
+}
+
+.section-title{font-size:clamp(26px,4vw,46px);line-height:1.08}
+.section-sub{font-size:15px;color:var(--text2);line-height:1.7;margin-top:10px;max-width:52ch}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 24px;font-family:'Inter',sans-serif;font-weight:600;
+  font-size:15px;border-radius:var(--r);border:none;text-decoration:none;
+  transition:all .2s ease;white-space:nowrap;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn svg{flex-shrink:0}
+
+.btn-green{
+  background:var(--green);color:#fff;
+  box-shadow:0 4px 22px var(--gglow);
+}
+.btn-green:hover{background:#22c55e;box-shadow:0 6px 30px rgba(37,211,102,.42);transform:translateY(-1px)}
+.btn-green:active{transform:scale(.98)}
+
+.btn-red{
+  background:var(--red);color:#fff;
+  box-shadow:0 4px 22px var(--rglow);
+}
+.btn-red:hover{background:var(--red2);box-shadow:0 6px 30px rgba(229,25,42,.46);transform:translateY(-1px)}
+.btn-red:active{transform:scale(.98)}
+
+.btn-ghost{
+  background:var(--panel);color:var(--text2);
+  border:1px solid var(--border);backdrop-filter:blur(6px);
+}
+.btn-ghost:hover{background:var(--panelh);color:var(--text);border-color:rgba(255,255,255,.15)}
+.btn-ghost:active{transform:scale(.98)}
+
+.btn-lg{padding:17px 32px;font-size:16px}
+.btn-full{width:100%}
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rev.on{opacity:1;transform:none}
+.rev[data-d="1"]{transition-delay:.10s}
+.rev[data-d="2"]{transition-delay:.18s}
+.rev[data-d="3"]{transition-delay:.26s}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.hdr{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 0;
+  background:linear-gradient(to bottom,rgba(7,8,14,.95),rgba(7,8,14,0));
+  transition:background .3s,border-color .3s;
+  border-bottom:1px solid transparent;
+}
+.hdr.stuck{
+  background:rgba(7,8,14,.96);
+  border-bottom-color:var(--border);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+}
+.hdr-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.logo{display:flex;flex-direction:column;line-height:1;user-select:none}
+.logo-name{
+  font-family:'Oswald',sans-serif;font-weight:700;
+  font-size:clamp(18px,2.8vw,24px);letter-spacing:.3px;color:#fff;
+}
+.logo-name em{color:var(--red2);font-style:normal}
+.logo-sub{
+  font-size:9.5px;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--muted);margin-top:2px;
+}
+
+/* Desktop nav links */
+.nav-links{
+  display:none;list-style:none;gap:32px;align-items:center;
+}
+.nav-links a{
+  font-size:14px;font-weight:500;color:var(--text2);
+  transition:color .15s;
+}
+.nav-links a:hover{color:var(--text)}
+@media(min-width:768px){.nav-links{display:flex}}
+
+.hdr-cta{padding:10px 20px;font-size:14px}
+
+/* =====================================================
+   HERO
+===================================================== */
+.hero{
+  min-height:100svh;
+  position:relative;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding-top:90px;
+  overflow:hidden;isolation:isolate;
+}
+
+/* Hero background — CSS only, no image */
+.hero-bg{
+  position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(ellipse 80% 60% at 65% 40%, rgba(100,20,30,.28) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 50% at 15% 70%, rgba(229,25,42,.12) 0%, transparent 55%),
+    linear-gradient(160deg, #0c0d18 0%, #07080e 50%, #0a0c12 100%);
+}
+
+/* Mobile: dark gradient from top and bottom */
+.hero-ovl{
+  position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(to bottom,
+      rgba(7,8,14,.80) 0%,
+      rgba(7,8,14,.35) 40%,
+      rgba(7,8,14,.82) 72%,
+      rgba(7,8,14,1.00) 100%
+    );
+}
+
+/* Speed-lines texture */
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:repeating-linear-gradient(
+    90deg,transparent 0,transparent 64px,
+    rgba(229,25,42,.016) 64px,rgba(229,25,42,.016) 65px
+  );
+}
+
+/* Watermark */
+.hero-wm{
+  position:absolute;right:-2%;bottom:-4%;z-index:0;
+  font-family:'Oswald',sans-serif;font-weight:700;
+  font-size:clamp(160px,38vw,380px);line-height:1;
+  letter-spacing:-4px;color:transparent;
+  -webkit-text-stroke:1.5px rgba(229,25,42,.10);
+  pointer-events:none;user-select:none;white-space:nowrap;
+}
+
+.hero-inner{
+  position:relative;z-index:1;
+  padding:0 0 clamp(72px,12vw,120px);
+}
+
+/* Pulsing location badge */
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--rtint);border:1px solid rgba(229,25,42,.35);
+  border-radius:999px;padding:6px 15px;
+  font-size:11px;font-weight:700;letter-spacing:1.8px;
+  text-transform:uppercase;color:var(--red2);margin-bottom:24px;
+}
+.badge-dot{
+  width:6px;height:6px;border-radius:50%;background:var(--red2);
+  animation:blink 2.4s ease-in-out infinite;
+}
+@keyframes blink{
+  0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(229,25,42,.8)}
+  50%{opacity:.6;box-shadow:0 0 0 6px rgba(229,25,42,0)}
+}
+
+.hero-h1{
+  font-size:clamp(50px,10vw,120px);
+  line-height:.95;margin-bottom:18px;
+  max-width:14ch;
+}
+.hero-h1 span{display:block}
+.h1-a{color:var(--text)}
+.h1-b{
+  color:var(--red2);
+  text-shadow:0 0 60px rgba(229,25,42,.5),0 0 120px rgba(229,25,42,.18);
+}
+.h1-c{
+  font-family:'Inter',sans-serif;font-weight:600;
+  font-size:clamp(11px,1.4vw,14px);
+  letter-spacing:4px;text-transform:uppercase;
+  color:var(--muted);margin-top:12px;
+  text-shadow:none;
+}
+
+.hero-lead{
+  font-size:clamp(14px,1.6vw,17px);color:var(--text2);
+  line-height:1.7;max-width:44ch;margin-bottom:30px;
+}
+
+.hero-ctas{
+  display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;
+}
+
+/* Stats */
+.hero-stats{
+  display:flex;
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--r);overflow:hidden;
+  backdrop-filter:blur(8px);max-width:460px;
+}
+.hst{
+  flex:1;padding:14px 10px;text-align:center;
+  border-right:1px solid var(--border);
+}
+.hst:last-child{border-right:none}
+.hst b{
+  display:block;font-family:'Oswald',sans-serif;
+  font-size:clamp(20px,3vw,30px);color:var(--red2);line-height:1;margin-bottom:4px;
+}
+.hst s{
+  text-decoration:none;display:block;
+  font-size:10px;font-weight:600;letter-spacing:1.3px;
+  text-transform:uppercase;color:var(--muted);
+}
+
+/* Scroll indicator */
+.scroll-cue{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  z-index:2;display:flex;flex-direction:column;align-items:center;gap:5px;
+  animation:cue 2.8s ease-in-out infinite;pointer-events:none;opacity:.4;
+}
+.scroll-cue span{font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
+.scroll-cue svg{width:18px;height:18px;stroke:var(--muted);fill:none;stroke-width:1.5;stroke-linecap:round}
+@keyframes cue{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+
+/* Desktop hero: content on left, image visible right */
+@media(min-width:768px){
+  .hero{justify-content:center}
+  .hero-inner{padding:80px 0}
+  .hero-ovl{
+    background:
+      linear-gradient(110deg,
+        rgba(7,8,14,.97) 0%,
+        rgba(7,8,14,.90) 38%,
+        rgba(7,8,14,.50) 62%,
+        rgba(7,8,14,.10) 100%
+      );
+  }
+  .hero-h1{max-width:none}
+}
+
+/* =====================================================
+   TRUST BAR
+===================================================== */
+.trust{background:var(--red);padding:0;overflow:hidden}
+.trust-row{
+  display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
+}
+.trust-row::-webkit-scrollbar{display:none}
+.trust-item{
+  display:flex;align-items:center;gap:10px;
+  padding:15px 24px;white-space:nowrap;flex-shrink:0;
+  font-size:13px;font-weight:600;
+  border-right:1px solid rgba(255,255,255,.18);
+}
+.trust-item:last-child{border-right:none}
+.trust-item svg{
+  width:19px;height:19px;flex-shrink:0;
+  fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
+}
+@media(min-width:768px){
+  .trust-row{justify-content:center}
+}
+
+/* =====================================================
+   SERVICES
+===================================================== */
+.services-sec{background:var(--bg2)}
+
+/* Responsive grid — 1 col → 2 col → 3 col */
+.sv-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+@media(min-width:540px){.sv-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:860px){.sv-grid{grid-template-columns:repeat(3,1fr)}}
+
+.sv-card{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--r);padding:24px 22px 20px;
+  display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+  transition:border-color .22s,transform .22s,box-shadow .22s;
+}
+/* Accent bar left */
+.sv-card::before{
+  content:"";position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:var(--red2);transform:scaleY(0);transform-origin:bottom;
+  transition:transform .28s ease;
+}
+.sv-card:hover{
+  border-color:rgba(229,25,42,.25);
+  transform:translateY(-4px);
+  box-shadow:0 16px 44px rgba(0,0,0,.3),0 0 0 1px rgba(229,25,42,.1);
+}
+.sv-card:hover::before{transform:scaleY(1)}
+
+.sv-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.sv-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border-radius:10px;
+  background:var(--rtint);color:var(--red2);
+  transition:background .2s,transform .2s;
+}
+.sv-card:hover .sv-icon{background:var(--red);color:#fff;transform:rotate(-6deg)}
+.sv-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.sv-num{
+  font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;
+  letter-spacing:2px;color:var(--muted);
+}
+.sv-name{
+  font-family:'Oswald',sans-serif;font-size:19px;font-weight:600;
+  color:var(--text);margin-bottom:7px;line-height:1.15;
+}
+.sv-desc{
+  font-size:13.5px;color:var(--muted);line-height:1.6;
+  flex:1;margin-bottom:16px;
+}
+.sv-cta{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:9px 14px;font-size:13px;font-weight:600;
+  color:var(--green);border-radius:7px;
+  background:rgba(37,211,102,.06);border:1px solid rgba(37,211,102,.18);
+  transition:background .18s;align-self:flex-start;
+}
+.sv-cta:hover{background:rgba(37,211,102,.14)}
+.sv-cta svg{width:17px;height:17px;fill:currentColor;flex-shrink:0}
+
+/* =====================================================
+   APPROACH
+===================================================== */
+.approach-sec{background:var(--bg)}
+.approach-grid{display:grid;gap:48px;align-items:center}
+/* Approach visual — painel de marca premium */
+.approach-img{
+  border-radius:var(--r);overflow:hidden;
+  aspect-ratio:4/3;position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px var(--border);
+  background:
+    radial-gradient(ellipse 90% 80% at 50% 50%, rgba(229,25,42,.13) 0%, transparent 62%),
+    linear-gradient(145deg,#0d0f1c 0%,#090b14 55%,#0c0e1a 100%);
+  display:flex;align-items:center;justify-content:center;
+  padding:40px;
+}
+/* Watermark "MB" atrás do conteúdo */
+.approach-img::before{
+  content:"MB";
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-52%);
+  font-family:'Oswald',sans-serif;font-weight:700;
+  font-size:clamp(130px,25vw,260px);
+  letter-spacing:-6px;line-height:1;
+  color:transparent;
+  -webkit-text-stroke:1.5px rgba(229,25,42,.07);
+  pointer-events:none;user-select:none;z-index:0;
+}
+/* Painel de conteúdo */
+.avp{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;
+  gap:24px;width:100%;
+}
+.avp-brand{text-align:center}
+.avp-name{
+  font-family:'Oswald',sans-serif;font-weight:700;
+  font-size:clamp(26px,4.5vw,44px);
+  letter-spacing:.4px;color:#fff;line-height:1;
+}
+.avp-name em{color:var(--red2);font-style:normal}
+.avp-sub{
+  font-size:10px;font-weight:700;letter-spacing:3px;
+  text-transform:uppercase;color:var(--muted);margin-top:7px;
+}
+/* Linha divisória vermelha */
+.avp-line{
+  width:56px;height:2px;border-radius:1px;
+  background:linear-gradient(90deg,transparent,var(--red2),transparent);
+}
+/* Stats em 3 colunas */
+.avp-stats{
+  display:flex;width:100%;max-width:340px;
+  border:1px solid var(--border);border-radius:var(--rsm);
+  overflow:hidden;
+}
+.avp-stat{
+  flex:1;padding:18px 10px;text-align:center;
+  background:var(--panel);border-right:1px solid var(--border);
+}
+.avp-stat:last-child{border-right:none}
+.avp-stat b{
+  display:block;font-family:'Oswald',sans-serif;
+  font-size:clamp(20px,3.2vw,30px);font-weight:700;
+  color:var(--red2);line-height:1;margin-bottom:5px;
+}
+.avp-stat s{
+  text-decoration:none;display:block;
+  font-size:10px;font-weight:600;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--muted);
+}
+/* Badge inferior */
+.avp-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--rtint);border:1px solid rgba(229,25,42,.22);
+  border-radius:999px;padding:6px 14px;
+  font-size:11px;font-weight:600;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--muted);
+}
+.avp-badge::before{
+  content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--red2);flex-shrink:0;
+}
+.approach-list{list-style:none;display:grid;gap:10px;margin-top:22px}
+.ali{
+  display:flex;gap:13px;align-items:flex-start;
+  padding:13px 16px;
+  background:var(--panel);border:1px solid var(--border);
+  border-left:2px solid var(--red);
+  border-radius:0 var(--rsm) var(--rsm) 0;
+  font-size:14px;color:var(--text2);line-height:1.55;
+}
+.ali::before{
+  content:"";flex-shrink:0;width:18px;height:18px;margin-top:1px;
+  border-radius:5px;background:var(--red)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E")
+    center/11px no-repeat;
+}
+@media(min-width:900px){
+  .approach-grid{grid-template-columns:1fr 1fr}
+  .approach-img{aspect-ratio:4/5}
+}
+@media(min-width:1100px){
+  .approach-grid{grid-template-columns:5fr 6fr;gap:72px}
+}
+
+/* =====================================================
+   WHY / DIFERENCIAIS
+===================================================== */
+.why-sec{background:var(--bg2)}
+.why-grid{
+  display:grid;gap:14px;
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));
+}
+.why-card{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--r);padding:26px 22px;
+  position:relative;overflow:hidden;
+  transition:border-color .22s,transform .22s;
+}
+.why-card:hover{border-color:rgba(229,25,42,.25);transform:translateY(-4px)}
+.why-n{
+  display:block;
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(52px,8vw,72px);font-weight:700;
+  color:var(--red);opacity:.1;
+  line-height:1;margin-bottom:8px;letter-spacing:-2px;
+}
+.why-card h3{
+  font-size:17px;color:var(--text);
+  margin-bottom:8px;line-height:1.2;
+}
+.why-card p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0}
+
+/* =====================================================
+   REVIEWS
+===================================================== */
+.reviews-sec{background:var(--bg)}
+.reviews-grid{
+  display:grid;gap:14px;
+  grid-template-columns:1fr;
+}
+@media(min-width:560px){.reviews-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.reviews-grid{grid-template-columns:repeat(3,1fr)}}
+
+.rv-card{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--r);padding:22px;
+  display:flex;flex-direction:column;
+}
+.rv-stars{color:#f5c518;font-size:13px;letter-spacing:2px;margin-bottom:12px}
+.rv-text{
+  font-size:14px;color:var(--text2);font-style:italic;
+  line-height:1.7;margin-bottom:16px;flex:1;
+}
+.rv-author{display:flex;align-items:center;gap:11px}
+.rv-av{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--rtint);border:1px solid var(--rtint2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;color:var(--red2);flex-shrink:0;
+}
+.rv-name{font-size:13px;font-weight:600;color:var(--text);line-height:1.2;display:block}
+.rv-car{font-size:12px;color:var(--muted)}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+.contact-sec{background:var(--bg3);position:relative;overflow:hidden}
+.contact-sec::before{
+  content:"";position:absolute;bottom:-100px;right:-100px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(229,25,42,.09) 0%,transparent 65%);
+  pointer-events:none;
+}
+.contact-grid{display:grid;gap:40px}
+@media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr;align-items:start}}
+@media(min-width:1024px){.contact-grid{grid-template-columns:6fr 5fr;gap:64px}}
+
+.contact-copy h2{font-size:clamp(28px,4.5vw,50px);line-height:1.08;margin-bottom:14px}
+.contact-copy p{font-size:15px;color:var(--text2);line-height:1.7;max-width:40ch}
+
+.info-box{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--r);overflow:hidden;
+}
+.info-row{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:18px 20px;border-bottom:1px solid var(--border);
+}
+.info-row:last-child{border-bottom:none}
+.info-ico{
+  display:flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:8px;
+  background:var(--rtint);flex-shrink:0;margin-top:2px;
+}
+.info-ico svg{width:17px;height:17px;fill:none;stroke:var(--red2);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.info-lbl{
+  display:block;font-size:10.5px;font-weight:700;
+  letter-spacing:1.8px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:3px;
+}
+.info-val{font-size:14px;color:var(--text2);line-height:1.55}
+.info-val a{color:var(--text2);transition:color .15s}
+.info-val a:hover{color:var(--red2)}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer{
+  background:var(--bg2);border-top:1px solid var(--border);
+  padding:40px 0 calc(40px + var(--safe));
+}
+
+.footer-inner{
+  display:grid;gap:32px;
+  grid-template-columns:1fr;
+}
+@media(min-width:640px){.footer-inner{grid-template-columns:2fr 1fr 1fr}}
+@media(min-width:900px){.footer-inner{grid-template-columns:2.5fr 1fr 1.2fr;gap:48px}}
+
+.footer-brand p{
+  font-size:13.5px;color:var(--muted);
+  line-height:1.7;margin-top:12px;max-width:34ch;
+}
+
+.footer-col h4{
+  font-family:'Oswald',sans-serif;font-size:13px;
+  letter-spacing:.8px;text-transform:uppercase;
+  color:var(--text);margin-bottom:16px;
+}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col ul a{font-size:13.5px;color:var(--muted);transition:color .15s}
+.footer-col ul a:hover{color:var(--red2)}
+
+.footer-bottom{
+  margin-top:32px;padding-top:24px;
+  border-top:1px solid var(--border);
+  font-size:12.5px;color:var(--muted);opacity:.6;
+}
+
+/* =====================================================
+   FAB WHATSAPP  —  all screens
+===================================================== */
+.fab{
+  display:flex;
+  position:fixed;right:20px;bottom:20px;z-index:80;
+  width:56px;height:56px;border-radius:50%;
+  background:var(--green);color:#fff;
+  align-items:center;justify-content:center;
+  box-shadow:0 4px 18px rgba(0,0,0,.4),0 0 0 3px rgba(37,211,102,.2);
+  text-decoration:none;
+  transition:transform .2s,box-shadow .2s;
+}
+.fab:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(0,0,0,.5)}
+.fab svg{width:28px;height:28px;fill:#fff}
+@media(min-width:768px){.fab{right:24px;bottom:24px}}
+
+/* =====================================================
+   THEME TOGGLE BUTTON
+===================================================== */
+.theme-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  background:var(--panel);border:1px solid var(--border);
+  color:var(--text2);
+  transition:background .2s,border-color .2s,color .2s,transform .3s;
+  -webkit-tap-highlight-color:transparent;
+}
+.theme-btn:hover{background:var(--panelh);color:var(--text)}
+.theme-btn:active{transform:rotate(20deg)}
+.theme-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:opacity .2s,transform .3s}
+.theme-btn .icon-sun{display:none}
+
+/* =====================================================
+   INTRO ANIMATION OVERLAY
+===================================================== */
+.intro{
+  position:fixed;inset:0;z-index:300;
+  background:#07080e;
+  pointer-events:all;
+}
+.intro.fade{
+  opacity:0;
+  transition:opacity .55s ease;
+  pointer-events:none;
+}
+.intro-trail,.intro-car{
+  position:absolute;inset:0;
+  width:100%;height:100%;display:block;
+}
+.intro-skip{
+  position:absolute;top:22px;right:22px;
+  padding:8px 18px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+  font-size:11px;font-weight:600;
+  letter-spacing:1.8px;text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+  transition:color .2s,background .2s,border-color .2s;
+  -webkit-tap-highlight-color:transparent;
+  cursor:pointer;
+}
+.intro-skip:hover{color:#fff;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22)}
+
+/* =====================================================
+   SCROLL-TO-TOP
+===================================================== */
+.totop{
+  position:fixed;
+  right:20px;bottom:86px;z-index:79;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--panel);color:var(--text);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  box-shadow:0 4px 14px rgba(0,0,0,.3);
+  opacity:0;visibility:hidden;
+  transform:translateY(10px);
+  transition:opacity .25s,transform .25s,visibility .25s,background .15s;
+}
+.totop.show{opacity:1;visibility:visible;transform:none}
+.totop:hover{background:var(--red);border-color:var(--red);color:#fff}
+.totop svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+@media(min-width:768px){.totop{right:24px;bottom:92px}}
+</style>
+</head>
+<body>
+
+<!-- ====================================================
+     HEADER
+==================================================== -->
+<header class="hdr" id="hdr">
+  <div class="c hdr-inner">
+    <a href="#" class="logo">
+      <div class="logo-name">M<em>B</em> GARAGEM</div>
+      <div class="logo-sub">Automotiva · Garça/SP</div>
+    </a>
+
+    <nav aria-label="Menu principal">
+      <ul class="nav-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <button class="theme-btn" id="theme-btn" aria-label="Modo claro">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+
+    <a class="btn btn-red hdr-cta"
+       href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20na%20MB%20Garagem%20Automotiva."
+       target="_blank" rel="noopener">
+      Agendar
+    </a>
+  </div>
+</header>
+
+<!-- ====================================================
+     HERO
+==================================================== -->
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-ovl" aria-hidden="true"></div>
+  <div class="hero-wm" aria-hidden="true">MB</div>
+
+  <div class="c hero-inner">
+    <div class="hero-badge">
+      <div class="badge-dot" aria-hidden="true"></div>
+      Garça · SP · Estética Automotiva
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="h1-a">GARAGEM</span>
+      <span class="h1-b">AUTOMOTIVA</span>
+      <span class="h1-c">MB · Cada detalhe, toda atenção</span>
+    </h1>
+
+    <p class="hero-lead">
+      Polimento, higienização, restauração de faróis e serviços especializados, com hora marcada e atenção ao mínimo detalhe do seu veículo.
+    </p>
+
+    <div class="hero-ctas">
+      <a class="btn btn-ghost btn-lg" href="#servicos">Ver serviços</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hst"><b>11</b><s>Serviços</s></div>
+      <div class="hst"><b>100%</b><s>Hora marcada</s></div>
+      <div class="hst"><b>Garça</b><s>SP</s></div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- ====================================================
+     TRUST BAR
+==================================================== -->
+<div class="trust" role="region" aria-label="Diferenciais">
+  <div class="trust-row">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      Atendimento com hora marcada
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      Orçamento sem compromisso
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg>
+      Garça/SP e região
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+      Resposta rápida pelo WhatsApp
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z"/></svg>
+      Produtos premium
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================
+     SERVICES
+==================================================== -->
+<section class="services-sec" id="servicos">
+  <div class="c">
+    <div class="rev">
+      <div class="eyebrow">O que fazemos</div>
+      <h2 class="section-title">Nossos serviços</h2>
+      <p class="section-sub">Cada serviço é feito de forma individual e especializada. Toque em qualquer card para solicitar pelo WhatsApp.</p>
+    </div>
+
+    <div class="sv-grid" style="margin-top:36px">
+
+      <article class="sv-card rev">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9c3 0 5 2 5 5s-2 4-5 4H3z"/><path d="M3 12a9 9 0 0 0 9 9c3 0 5-2 5-5"/><path d="M20 8l2-1M20 12h2M20 16l2 1"/></svg></div>
+          <span class="sv-num">01</span>
+        </div>
+        <div class="sv-name">Restauração de farol</div>
+        <div class="sv-desc">Recuperação da transparência e brilho dos faróis desgastados.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Restaura%C3%A7%C3%A3o%20de%20farol." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev" data-d="1">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9c3 0 5 2 5 5s-2 4-5 4H3z"/><path d="M20 5l2 2-2 2M22 7h-5"/></svg></div>
+          <span class="sv-num">02</span>
+        </div>
+        <div class="sv-name">Troca de farol</div>
+        <div class="sv-desc">Substituição de faróis danificados com ajuste correto.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Troca%20de%20farol." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev" data-d="2">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><path d="M3 14c0-2 1-3 3-3h12c2 0 3 1 3 3v3H3z"/><path d="M6 17v2M18 17v2M3 14h18"/></svg></div>
+          <span class="sv-num">03</span>
+        </div>
+        <div class="sv-name">Para-choque</div>
+        <div class="sv-desc">Troca e reparo de para-choque para recuperar a aparência.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Para-choque." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="12" height="8" rx="4"/><path d="M16 9h3a2 2 0 0 1 2 2"/><path d="M12 13v6M9 19h6"/></svg></div>
+          <span class="sv-num">04</span>
+        </div>
+        <div class="sv-name">Retrovisor</div>
+        <div class="sv-desc">Troca e ajuste de retrovisor para segurança e visibilidade.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Retrovisor." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev" data-d="1">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.4"/></svg></div>
+          <span class="sv-num">05</span>
+        </div>
+        <div class="sv-name">Fechadura</div>
+        <div class="sv-desc">Reparo e manutenção de fechaduras e travas do veículo.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Fechadura." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev" data-d="2">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 11h18M8 18v2M16 18v2"/></svg></div>
+          <span class="sv-num">06</span>
+        </div>
+        <div class="sv-name">Vidro elétrico</div>
+        <div class="sv-desc">Manutenção da máquina de vidro elétrico ou manual.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Vidro%20el%C3%A9trico." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12h5a2 2 0 0 1 0 4H9z"/><path d="M9 12v4"/></svg></div>
+          <span class="sv-num">07</span>
+        </div>
+        <div class="sv-name">Maçaneta</div>
+        <div class="sv-desc">Troca e reparo de maçanetas internas e externas.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Ma%C3%A7aneta." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev" data-d="1">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c1 1 1 2 1 3h6c0-1 0-2 1-3a6 6 0 0 0-4-10z"/></svg></div>
+          <span class="sv-num">08</span>
+        </div>
+        <div class="sv-name">Iluminação</div>
+        <div class="sv-desc">Manutenção e reparo completo do sistema de iluminação.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Ilumina%C3%A7%C3%A3o." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev" data-d="2">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><path d="M12 3l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z"/></svg></div>
+          <span class="sv-num">09</span>
+        </div>
+        <div class="sv-name">Polimento</div>
+        <div class="sv-desc">Polimento técnico para corrigir e revitalizar a pintura.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Polimento." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><path d="M6 4h6a3 3 0 0 1 3 3v7H6z"/><path d="M6 14h12a2 2 0 0 1 2 2v3"/><path d="M6 14v6"/></svg></div>
+          <span class="sv-num">10</span>
+        </div>
+        <div class="sv-name">Lavagem de banco</div>
+        <div class="sv-desc">Lavagem e limpeza profunda dos bancos do veículo.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Lavagem%20de%20banco." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+      <article class="sv-card rev" data-d="1">
+        <div class="sv-head">
+          <div class="sv-icon"><svg viewBox="0 0 24 24"><path d="M8 3h5l1 4H7z"/><path d="M7 7h7l1 6a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"/><path d="M10 16v4M14 16v4"/></svg></div>
+          <span class="sv-num">11</span>
+        </div>
+        <div class="sv-name">Higienização interna</div>
+        <div class="sv-desc">Higienização interna completa com atenção a cada detalhe.</div>
+        <a class="sv-cta" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Or%C3%A7amento%20para%20Higieniza%C3%A7%C3%A3o%20interna." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+          Solicitar
+        </a>
+      </article>
+
+    </div><!-- /sv-grid -->
+  </div>
+</section>
+
+<!-- ====================================================
+     APPROACH
+==================================================== -->
+<section class="approach-sec" id="sobre">
+  <div class="c">
+    <div class="approach-grid">
+      <div class="approach-img rev">
+        <div class="avp">
+          <div class="avp-brand">
+            <div class="avp-name">M<em>B</em> GARAGEM</div>
+            <div class="avp-sub">Automotiva · Garça/SP</div>
+          </div>
+          <div class="avp-line"></div>
+          <div class="avp-stats">
+            <div class="avp-stat"><b>11</b><s>Serviços</s></div>
+            <div class="avp-stat"><b>100%</b><s>Hora marcada</s></div>
+            <div class="avp-stat"><b>Garça</b><s>SP</s></div>
+          </div>
+          <div class="avp-badge">Estética Automotiva</div>
+        </div>
+      </div>
+      <div class="rev">
+        <div class="eyebrow">Nossa abordagem</div>
+        <h2 class="section-title">Pensamos no carro<br>peça por peça.</h2>
+        <p class="section-sub" style="max-width:46ch">Um veículo é a soma de centenas de componentes. Nosso processo trata cada um de forma específica, com o produto e a técnica corretos para cada material.</p>
+        <ul class="approach-list">
+          <li class="ali">Diagnóstico da pintura antes de qualquer polimento</li>
+          <li class="ali">Produtos específicos para couro, tecido e plástico interno</li>
+          <li class="ali">Proteção pensada para o uso real do dia a dia</li>
+          <li class="ali">Revisão final item a item antes da entrega</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     DIFERENCIAIS
+==================================================== -->
+<section class="why-sec" id="diferenciais">
+  <div class="c">
+    <div class="rev">
+      <div class="eyebrow">Diferenciais</div>
+      <h2 class="section-title">Por que a MB Garagem</h2>
+    </div>
+    <div class="why-grid" style="margin-top:36px">
+      <div class="why-card rev">
+        <span class="why-n" aria-hidden="true">01</span>
+        <h3>Hora marcada</h3>
+        <p>Seu carro atendido no horário combinado, sem fila e sem espera.</p>
+      </div>
+      <div class="why-card rev" data-d="1">
+        <span class="why-n" aria-hidden="true">02</span>
+        <h3>Produtos premium</h3>
+        <p>Ceras, polidores e produtos selecionados para cada tipo de superfície.</p>
+      </div>
+      <div class="why-card rev" data-d="2">
+        <span class="why-n" aria-hidden="true">03</span>
+        <h3>Equipe experiente</h3>
+        <p>Profissionais treinados em polimento e conservação automotiva.</p>
+      </div>
+      <div class="why-card rev" data-d="3">
+        <span class="why-n" aria-hidden="true">04</span>
+        <h3>Orçamento grátis</h3>
+        <p>Avaliação e valor combinados antes de iniciar qualquer serviço.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     REVIEWS
+==================================================== -->
+<section class="reviews-sec" id="depoimentos">
+  <div class="c">
+    <div class="rev">
+      <div class="eyebrow">Clientes</div>
+      <h2 class="section-title">O que dizem sobre nós</h2>
+      <p class="section-sub">A satisfação de quem confia o carro à MB Garagem Automotiva.</p>
+    </div>
+    <div class="reviews-grid" style="margin-top:36px">
+
+      <figure class="rv-card rev">
+        <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-text">"Deixei meu carro para restauração dos faróis e ficou como novo. Atendimento no horário e serviço impecável!"</p>
+        <div class="rv-author">
+          <div class="rv-av">MR</div>
+          <div><span class="rv-name">Marcos Ribeiro</span><span class="rv-car">Honda Civic</span></div>
+        </div>
+      </figure>
+
+      <figure class="rv-card rev" data-d="1">
+        <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-text">"Fiz a higienização interna e lavagem dos bancos. Meu carro voltou com cheiro de novo. Recomendo demais!"</p>
+        <div class="rv-author">
+          <div class="rv-av">JS</div>
+          <div><span class="rv-name">Juliana Souza</span><span class="rv-car">Jeep Renegade</span></div>
+        </div>
+      </figure>
+
+      <figure class="rv-card rev" data-d="2">
+        <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-text">"O vidro elétrico estava travado e resolveram no mesmo dia. Preço justo e muita atenção com o cliente."</p>
+        <div class="rv-author">
+          <div class="rv-av">CA</div>
+          <div><span class="rv-name">Carlos Almeida</span><span class="rv-car">VW Gol</span></div>
+        </div>
+      </figure>
+
+      <figure class="rv-card rev">
+        <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-text">"Polimento excelente, tiraram todos os riscos da pintura. Profissionais que entendem do assunto de verdade."</p>
+        <div class="rv-author">
+          <div class="rv-av">PF</div>
+          <div><span class="rv-name">Patrícia Fernandes</span><span class="rv-car">Toyota Corolla</span></div>
+        </div>
+      </figure>
+
+      <figure class="rv-card rev" data-d="1">
+        <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-text">"Troquei retrovisor e para-choque. Serviço rápido, bem feito e orçamento sem enrolação. Voltarei sempre."</p>
+        <div class="rv-author">
+          <div class="rv-av">RL</div>
+          <div><span class="rv-name">Rafael Lima</span><span class="rv-car">Fiat Argo</span></div>
+        </div>
+      </figure>
+
+      <figure class="rv-card rev" data-d="2">
+        <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-text">"Atendimento nota 10 pelo WhatsApp. Marcaram hora e não precisei esperar. Virou minha garagem de confiança."</p>
+        <div class="rv-author">
+          <div class="rv-av">AM</div>
+          <div><span class="rv-name">Amanda Martins</span><span class="rv-car">Hyundai HB20</span></div>
+        </div>
+      </figure>
+
+    </div>
+    <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:20px;opacity:.6">Depoimentos ilustrativos.</p>
+  </div>
+</section>
+
+<!-- ====================================================
+     CONTACT
+==================================================== -->
+<section class="contact-sec" id="contato">
+  <div class="c">
+    <div class="contact-grid">
+      <div class="contact-copy rev">
+        <div class="eyebrow">Agende agora</div>
+        <h2>Seu carro merece<br>esse cuidado.</h2>
+        <p>Entre em contato e agende na MB Garagem Automotiva, em Garça/SP. Respondemos rápido pelo WhatsApp.</p>
+      </div>
+
+      <div class="info-box rev">
+        <div class="info-row">
+          <div class="info-ico">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg>
+          </div>
+          <div>
+            <span class="info-lbl">Endereço</span>
+            <span class="info-val">R. Dep. Manoel Joaquim F. Rebelo, Garça/SP</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-ico">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <span class="info-lbl">WhatsApp</span>
+            <span class="info-val"><a href="https://wa.me/5514997024535" target="_blank" rel="noopener">+55 14 99702-4535</a></span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-ico">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <div>
+            <span class="info-lbl">Horário de atendimento</span>
+            <span class="info-val">Seg a Sex: 08h–18h &nbsp;·&nbsp; Sáb: 08h–12h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     FOOTER
+==================================================== -->
+<footer>
+  <div class="c">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-name">M<em>B</em> GARAGEM</div>
+          <div class="logo-sub">Automotiva · Garça/SP</div>
+        </div>
+        <p>Estética automotiva em Garça/SP com hora marcada, produtos premium e atenção a cada detalhe do seu veículo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5514997024535" target="_blank" rel="noopener">+55 14 99702-4535</a></li>
+          <li><a href="#contato">Garça/SP</a></li>
+          <li><a href="#contato">Seg–Sex: 08h–18h</a></li>
+          <li><a href="#contato">Sáb: 08h–12h</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 MB Garagem Automotiva · Todos os direitos reservados</p>
+  </div>
+</footer>
+
+<!-- INTRO ANIMATION -->
+<div class="intro" id="intro" aria-hidden="true">
+  <canvas class="intro-trail" id="intro-trail"></canvas>
+  <canvas class="intro-car"   id="intro-car"></canvas>
+  <button class="intro-skip"  id="intro-skip">Pular</button>
+</div>
+
+<!-- FAB WhatsApp -->
+<a class="fab" href="https://wa.me/5514997024535?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20na%20MB%20Garagem%20Automotiva." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/><path d="M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.45 6.6 2 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 7c0 5.45-4.43 9.89-9.88 9.89zm8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+</a>
+
+<!-- Scroll to top (desktop) -->
+<button class="totop" id="totop" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  'use strict';
+
+  /* Header stuck state */
+  var hdr = document.getElementById('hdr');
+  function onScroll(){
+    var y = window.scrollY;
+    hdr.classList.toggle('stuck', y > 40);
+    var tt = document.getElementById('totop');
+    if(tt) tt.classList.toggle('show', y > 400);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Scroll to top */
+  var totop = document.getElementById('totop');
+  if(totop) totop.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+
+  /* Scroll reveal */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.10, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rev').forEach(function(el){ io.observe(el); });
+
+
+  /* Anchor smooth scroll with header offset */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href').slice(1);
+      if(!id) return;
+      var el = document.getElementById(id);
+      if(!el) return;
+      e.preventDefault();
+      var top = el.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({top:top, behavior:'smooth'});
+    });
+  });
+
+  /* Theme toggle */
+  var themeBtn = document.getElementById('theme-btn');
+  var htmlEl = document.documentElement;
+  var saved = localStorage.getItem('mbg-theme') || 'dark';
+  function applyTheme(t){
+    if(t === 'light') htmlEl.dataset.theme = 'light';
+    else delete htmlEl.dataset.theme;
+    var sun = themeBtn.querySelector('.icon-sun');
+    var moon = themeBtn.querySelector('.icon-moon');
+    if(t === 'light'){
+      sun.style.display = 'block'; moon.style.display = 'none';
+      themeBtn.setAttribute('aria-label','Modo escuro');
+    } else {
+      sun.style.display = 'none'; moon.style.display = 'block';
+      themeBtn.setAttribute('aria-label','Modo claro');
+    }
+  }
+  applyTheme(saved);
+  themeBtn.addEventListener('click', function(){
+    var next = htmlEl.dataset.theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('mbg-theme', next);
+    applyTheme(next);
+  });
+
+})();
+</script>
+
+<script>
+/* ============================================================
+   INTRO — carro SVG sobe pela tela em cobrinha
+============================================================ */
+(function(){
+  var SK = 'mbg-intro';
+  var overlay = document.getElementById('intro');
+  if(!overlay) return;
+  if(sessionStorage.getItem(SK)){ overlay.remove(); return; }
+  sessionStorage.setItem(SK,'1');
+
+  var tc = document.getElementById('intro-trail');
+  var cc = document.getElementById('intro-car');
+  var tt = tc.getContext('2d');
+  var ct = cc.getContext('2d');
+
+  var W, H, carW, carH;
+  var animId, startTs = null;
+  var DURATION = 6600;
+  var ended = false;
+
+  /* viewBox do SVG do carro */
+  var SVG_W = 200, SVG_H = 88;
+
+  var WAVES = 2.4;
+  var AMP   = 0.27; /* amplitude X = 27% da largura da tela */
+
+  function center(t){
+    var cy = H + carH/2 - (H + 2*carH) * t;
+    var cx = W/2 + (W * AMP) * Math.sin(t * WAVES * Math.PI * 2);
+    return {x:cx, y:cy};
+  }
+  function heading(t){
+    var a = center(t), b = center(Math.min(t+0.003,1));
+    return Math.atan2(b.y-a.y, b.x-a.x);
+  }
+
+  function resize(){
+    W = tc.width = cc.width = window.innerWidth;
+    H = tc.height= cc.height= window.innerHeight;
+    carW = Math.min(W * 0.48, 320);
+    carH = carW * (SVG_H / SVG_W);
+  }
+  resize();
+
+  function drawBg(){
+    tt.fillStyle='#07080e'; tt.fillRect(0,0,W,H);
+    tt.save(); tt.globalAlpha=0.012; tt.fillStyle='#fff';
+    for(var gx=0;gx<W;gx+=48) tt.fillRect(gx,0,1,H);
+    for(var gy=0;gy<H;gy+=48) tt.fillRect(0,gy,W,1);
+    tt.restore();
+    tt.save(); tt.globalAlpha=0.028; tt.fillStyle='#fff';
+    tt.font='700 '+Math.min(W*0.38,220)+'px Oswald,sans-serif';
+    tt.textAlign='center'; tt.textBaseline='middle';
+    tt.fillText('MB',W/2,H/2);
+    tt.restore();
+  }
+  drawBg();
+
+  function dismiss(){
+    if(ended) return; ended=true;
+    cancelAnimationFrame(animId);
+    overlay.classList.add('fade');
+    setTimeout(function(){ overlay.remove(); },580);
+  }
+  document.getElementById('intro-skip').addEventListener('click',dismiss);
+  document.addEventListener('keydown',function onKey(e){
+    if(e.key==='Escape'){ dismiss(); document.removeEventListener('keydown',onKey); }
+  });
+
+  /* ---- SVG do carro (hatchback cartoon, frente para a DIREITA) ---- */
+  function carSVG(){
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 88" width="200" height="88">'
+
+    /* corpo principal — arcos no underbody criam o vão das rodas */
+    +'<path fill="#0bccd6" d="'
+    +'M16,68 C11,68 8,64 9,58 L11,47 C11,41 15,35 21,29 L35,13'
+    +' C39,9 45,8 53,8 L138,8 C148,8 157,13 165,25 L181,47'
+    +' C185,52 187,58 187,63 L187,68 L180,68'
+    +' A21,19 0 0,0 138,68 L76,68 A21,19 0 0,0 34,68 Z'
+    +'" />'
+
+    /* sombra/friso inferior do carro */
+    +'<path fill="#089aaa" d="M16,63 L34,63 A21,12 0 0,0 76,63 L138,63 A21,12 0 0,0 180,63 L187,63 L187,68 L180,68 A21,19 0 0,0 138,68 L76,68 A21,19 0 0,0 34,68 L9,68 C8,66 9,63 16,63Z"/>'
+
+    /* janela traseira (hatch inclinado) */
+    +'<path fill="#0d1e2e" opacity=".92" d="M13,52 L18,39 C20,32 24,23 31,17 C35,12 41,8 53,8 L65,8 L65,58 Z"/>'
+    /* janelas laterais */
+    +'<rect fill="#0d1e2e" opacity=".92" x="68" y="8" width="56" height="50" rx="2"/>'
+    /* parabrisa */
+    +'<path fill="#0d1e2e" opacity=".92" d="M128,8 L138,8 C148,8 157,13 165,25 L181,47 L181,58 L128,58 Z"/>'
+
+    /* montantes (pilares entre janelas) */
+    +'<rect fill="#0bccd6" x="64" y="8" width="5" height="50"/>'
+    +'<rect fill="#0bccd6" x="123" y="8" width="6" height="50"/>'
+
+    /* reflexo janelas */
+    +'<path fill="rgba(255,255,255,.13)" d="M70,12 L90,12 L88,22 L70,22Z"/>'
+    +'<path fill="rgba(255,255,255,.10)" d="M132,12 L156,12 C160,16 164,22 167,28 L150,22 L132,20Z"/>'
+
+    /* lanterna traseira */
+    +'<rect fill="#cc1428" x="9" y="38" width="7" height="18" rx="3"/>'
+    +'<rect fill="#ff3850" opacity=".7" x="10" y="39" width="4" height="8" rx="2"/>'
+    +'<rect fill="#ffeedd" x="9" y="57" width="7" height="4" rx="2"/>'
+
+    /* farol dianteiro */
+    +'<path fill="#fffce0" d="M183,45 C186,45 188,48 188,52 C188,57 186,59 183,59 L178,52Z"/>'
+    +'<ellipse fill="#fff" cx="185" cy="52" rx="3.5" ry="5"/>'
+
+    /* escapamento */
+    +'<rect fill="#787888" x="6" y="63" width="13" height="5" rx="2.5"/>'
+    +'<rect fill="#9898a8" x="7" y="64" width="9" height="3" rx="1.5"/>'
+
+    /* RODA TRASEIRA */
+    +'<circle fill="#131320" cx="55" cy="76" r="18"/>'
+    +'<circle fill="#858592" cx="55" cy="76" r="11"/>'
+    +'<circle fill="#9898a6" cx="55" cy="76" r="8"/>'
+    +'<line stroke="#666674" stroke-width="2" stroke-linecap="round" x1="55" y1="68" x2="55" y2="84"/>'
+    +'<line stroke="#666674" stroke-width="2" stroke-linecap="round" x1="46" y1="71" x2="64" y2="81"/>'
+    +'<line stroke="#666674" stroke-width="2" stroke-linecap="round" x1="46" y1="81" x2="64" y2="71"/>'
+    +'<circle fill="#c0c0cc" cx="55" cy="76" r="3.5"/>'
+
+    /* RODA DIANTEIRA */
+    +'<circle fill="#131320" cx="159" cy="76" r="18"/>'
+    +'<circle fill="#858592" cx="159" cy="76" r="11"/>'
+    +'<circle fill="#9898a6" cx="159" cy="76" r="8"/>'
+    +'<line stroke="#666674" stroke-width="2" stroke-linecap="round" x1="159" y1="68" x2="159" y2="84"/>'
+    +'<line stroke="#666674" stroke-width="2" stroke-linecap="round" x1="150" y1="71" x2="168" y2="81"/>'
+    +'<line stroke="#666674" stroke-width="2" stroke-linecap="round" x1="150" y1="81" x2="168" y2="71"/>'
+    +'<circle fill="#c0c0cc" cx="159" cy="76" r="3.5"/>'
+
+    /* sombra sob o carro */
+    +'<ellipse fill="rgba(0,0,0,.25)" cx="100" cy="86" rx="82" ry="4"/>'
+
+    +'</svg>';
+  }
+
+  /* Carrega SVG via Blob → Image (fundo 100% transparente) */
+  var blob = new Blob([carSVG()], {type:'image/svg+xml'});
+  var url  = URL.createObjectURL(blob);
+  var img  = new Image();
+  img.onload = function(){ URL.revokeObjectURL(url); run(img); };
+  img.onerror= function(){ overlay.remove(); };
+  img.src = url;
+
+  /* ---- Loop de animação ---- */
+  function run(car){
+    function frame(ts){
+      if(ended) return;
+      if(!startTs) startTs=ts;
+      var t  = Math.min((ts-startTs)/DURATION, 1);
+      var c  = center(t);
+      var ag = heading(t);
+
+      /* trilha: fade lento → fumaça persiste ~2s */
+      tt.fillStyle='rgba(7,8,14,0.018)';
+      tt.fillRect(0,0,W,H);
+
+      /* posição do escapamento em coord. locais:
+         x_local = -carW*0.44 (traseira = esq da imagem)
+         y_local = +carH*0.27 (baixo, onde fica o cano)
+         rotacionados pelo ângulo ag                      */
+      var rLx=-carW*0.44, rLy=carH*0.27;
+      var ca=Math.cos(ag), sa=Math.sin(ag);
+      var exX=c.x + rLx*ca - rLy*sa;
+      var exY=c.y + rLx*sa + rLy*ca;
+
+      var vis = c.y < H+carH && c.y > -carH;
+      if(vis){
+        var n=5+Math.floor(Math.random()*3);
+        for(var i=0;i<n;i++){
+          var sr=8+Math.random()*9;
+          tt.beginPath();
+          tt.arc(exX+(Math.random()-.5)*sr, exY+(Math.random()-.5)*sr, sr, 0, Math.PI*2);
+          tt.fillStyle='rgba(148,148,148,'+(0.32+Math.random()*0.26).toFixed(3)+')';
+          tt.fill();
+        }
+      }
+
+      /* carro na layer de cima (limpa a cada frame) */
+      ct.clearRect(0,0,W,H);
+      if(vis){
+        ct.save();
+        ct.translate(c.x, c.y);
+        ct.rotate(ag);
+        ct.drawImage(car, -carW/2, -carH/2, carW, carH);
+        ct.restore();
+      }
+
+      if(t>=1){ dismiss(); return; }
+      animId=requestAnimationFrame(frame);
+    }
+    animId=requestAnimationFrame(frame);
+  }
+})();
+</script>
+</body>
+</html>

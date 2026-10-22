@@ -1,0 +1,89 @@
+/* =====================================================
+   BARRA DE AÇÃO FIXA  —  mobile
+===================================================== */
+.action-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+  display: flex; align-items: stretch;
+  background: rgba(7,8,14,.96);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  padding-bottom: var(--safe);
+}
+[data-theme="light"] .action-bar {
+  background: rgba(244,242,237,.96);
+}
+
+.ab-btn {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 4px; padding: 10px 4px 10px;
+  font-size: 9.5px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--text2); text-decoration: none;
+  border-right: 1px solid var(--border);
+  transition: background .15s, color .15s;
+  min-height: 56px;
+  -webkit-tap-highlight-color: transparent;
+}
+.ab-btn:last-child { border-right: none; }
+.ab-btn svg {
+  width: 20px; height: 20px; flex-shrink: 0;
+  fill: none; stroke: currentColor; stroke-width: 1.8;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ab-btn:active { background: var(--panel); }
+.ab-btn.ab-primary { color: var(--green); }
+.ab-btn.ab-primary svg { stroke: var(--green); }
+.ab-btn.ab-primary:active { background: rgba(37,211,102,.07); }
+
+/* Espaço reservado no rodapé da página para a barra não cobrir conteúdo */
+.action-bar-spacer {
+  height: calc(64px + var(--safe));
+  display: block;
+}
+
+/* Desktop: barra some, FAB aparece */
+@media (min-width: 768px) {
+  .action-bar { display: none; }
+  .action-bar-spacer { display: none; }
+}
+
+/* =====================================================
+   FAB WHATSAPP  —  desktop
+===================================================== */
+.fab {
+  display: none;
+  position: fixed; right: 24px; bottom: 24px; z-index: 90;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--green); color: #fff;
+  align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.4), 0 0 0 3px rgba(37,211,102,.18);
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.fab:hover  { transform: scale(1.1); box-shadow: 0 6px 24px rgba(0,0,0,.5); }
+.fab svg { width: 26px; height: 26px; fill: #fff; }
+
+/* Botão voltar ao topo (desktop) */
+.totop {
+  display: none;
+  position: fixed; right: 24px; bottom: 84px; z-index: 89;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--panel); color: var(--text);
+  border: 1px solid var(--border);
+  align-items: center; justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,.3);
+  opacity: 0; visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .25s, transform .25s, visibility .25s, background .15s;
+}
+.totop.show { opacity: 1; visibility: visible; transform: none; }
+.totop:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.totop svg {
+  width: 18px; height: 18px; fill: none; stroke: currentColor;
+  stroke-width: 2; stroke-linecap: round;
+}
+
+@media (min-width: 768px) {
+  .fab   { display: flex; }
+  .totop { display: flex; }
+}
